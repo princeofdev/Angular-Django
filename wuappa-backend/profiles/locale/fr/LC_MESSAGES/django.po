@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-06 19:06+0100\n"
+"PO-Revision-Date: 2018-02-16 00:19+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: profiles/admin.py:18
+msgid "Profiles"
+msgstr "Profils"
+
+#: profiles/admin.py:40
+msgid "User data"
+msgstr "Données d’utilisateur"
+
+#: profiles/admin.py:43
+msgid "Groups & permissions"
+msgstr ""
+
+#: profiles/admin.py:52
+msgid "Phone"
+msgstr "Mobile"
+
+#: profiles/admin.py:58
+msgid "Type"
+msgstr "Type"
+
+#: profiles/admin.py:67
+msgid "Is Verified"
+msgstr "Est vérifié"
+
+#: profiles/filters.py:9
+msgid "By user work zone Country"
+msgstr "Par zone de travail de l’utilisateur Pays"
+
+#: profiles/filters.py:25
+msgid "By user work zone Region"
+msgstr "Par zone de travail de l’utilisateur Région"
+
+#: profiles/filters.py:41
+msgid "By user work zone City"
+msgstr "Par zone de travail de l’utilisateur Ville"
+
+#: profiles/filters.py:57
+msgid "By user work zone"
+msgstr "Par zone de travail de l’utilisateur"
+
+#: profiles/models.py:23
+msgid "Separate urls using a comma"
+msgstr "Séparez les URL en utilisant une virgule"
+
+#: profiles/models.py:25 profiles/models.py:27
+msgid "Separate using a comma"
+msgstr "Séparer en utilisant une virgule"
+
+#: profiles/models.py:38 profiles/serializers.py:200
+msgid "User"
+msgstr "Utilisateur"
+
+#: profiles/models.py:39
+msgid "WorkZone"
+msgstr "Zone de travail"
+
+#: profiles/serializers.py:54 profiles/tests/test_registration.py:179
+#: profiles/tests/test_registration.py:635
+msgid "A user is already registered with this e-mail address."
+msgstr "Un utilisateur est déjà enregistré avec cette adresse e-mail."
+
+#: profiles/serializers.py:65 profiles/serializers.py:69
+#: profiles/tests/test_registration.py:391
+#: profiles/tests/test_registration.py:903
+#: profiles/tests/test_user_detail.py:193
+#: profiles/tests/test_user_detail.py:362
+msgid "This phone number is not valid."
+msgstr "Ce numéro de téléphone n’est pas valide."
+
+#: profiles/serializers.py:67 profiles/tests/test_registration.py:373
+#: profiles/tests/test_registration.py:880
+msgid "Missing or invalid default region"
+msgstr "Région par défaut manquante ou non valide"
+
+#: profiles/serializers.py:86 profiles/tests/test_registration.py:302
+#: profiles/tests/test_registration.py:789
+msgid "The two password fields didn't match."
+msgstr "Les deux champs de mot de passe ne correspondaient pas."
+
+#: profiles/serializers.py:91 profiles/serializers.py:151
+#: profiles/tests/test_registration.py:971
+#: profiles/tests/test_registration.py:1016
+#: profiles/tests/test_registration.py:1061
+#: profiles/tests/test_registration.py:1085
+#: profiles/tests/test_user_detail.py:443
+msgid "Must include iban and swift account number."
+msgstr "Doit inclure iban et le numéro de compte Swift."
+
+#: profiles/serializers.py:93 profiles/serializers.py:153
+#: profiles/tests/test_registration.py:478
+#: profiles/tests/test_registration.py:501
+#: profiles/tests/test_user_detail.py:470
+msgid "Must include one document at least"
+msgstr "Doit inclure un document au moins"
+
+#: profiles/serializers.py:95 profiles/tests/test_registration.py:1107
+#: profiles/tests/test_registration.py:1130
+msgid "Must include one services at least"
+msgstr "Doit inclure un service au moins"
+
+#: profiles/serializers.py:97 profiles/tests/test_registration.py:1175
+#: profiles/tests/test_registration.py:1198
+msgid "Must include one work_zones at least"
+msgstr "Doit inclure un work_zones au moins"
+
+#: profiles/serializers.py:99 profiles/serializers.py:155
+#: profiles/tests/test_user_detail.py:496
+msgid "Must include one city"
+msgstr "Doit inclure une ville"
+
+#: profiles/serializers.py:200
+msgid "request to change his services"
+msgstr "demande de changement de ses prestations"
+
+#: profiles/serializers.py:201
+#, fuzzy
+#| msgid "User new services required are (by Services Id): "
+msgid ""
+"\n"
+"\n"
+"User new services required are: "
+msgstr "Les nouveaux services utilisateur requis sont (par ID de services):"
+
+#: profiles/serializers.py:205
+#, fuzzy
+#| msgid ""
+#| "These changes must be made manually by the administrator in web admin "
+#| "panel"
+msgid ""
+"\n"
+"\n"
+"These changes must be made manually by the administrator in web admin panel"
+msgstr ""
+"Ces modifications doivent être effectuées manuellement par l’administrateur "
+"dans le panneau d’administration Web"
+
+#: profiles/serializers.py:258
+msgid "Request to change services user from user: "
+msgstr "Demande de changement d’utilisateur de services de l’utilisateur: "
+
+#: profiles/settings.py:8
+msgid "Final"
+msgstr "Final"
+
+#: profiles/settings.py:9
+msgid "Professional"
+msgstr "Professionnel"
+
+#: profiles/tests/test_registration.py:125
+#: profiles/tests/test_registration.py:196
+#: profiles/tests/test_registration.py:231
+#: profiles/tests/test_registration.py:266
+#: profiles/tests/test_registration.py:337
+#: profiles/tests/test_registration.py:566
+#: profiles/tests/test_registration.py:657
+#: profiles/tests/test_registration.py:702
+#: profiles/tests/test_registration.py:747
+#: profiles/tests/test_registration.py:834
+msgid "This field is required."
+msgstr "Ce champ est requis."
+
+#: profiles/tests/test_registration.py:143
+#: profiles/tests/test_registration.py:214
+#: profiles/tests/test_registration.py:249
+#: profiles/tests/test_registration.py:284
+#: profiles/tests/test_registration.py:355
+#: profiles/tests/test_registration.py:589
+#: profiles/tests/test_registration.py:680
+#: profiles/tests/test_registration.py:725
+#: profiles/tests/test_registration.py:770
+#: profiles/tests/test_registration.py:857
+#: profiles/tests/test_user_detail.py:169
+#: profiles/tests/test_user_detail.py:336
+msgid "This field may not be blank."
+msgstr "Ce champ ne peut pas être vide."
+
+#: profiles/tests/test_registration.py:161
+#: profiles/tests/test_registration.py:612
+msgid "Enter a valid email address."
+msgstr "Entrez une adresse mail valide."
+
+#: profiles/tests/test_registration.py:320
+#: profiles/tests/test_registration.py:812
+msgid "Password must be a minimum of 6 characters."
+msgstr "Le mot de passe doit comporter au moins 6 caractères."
+
+#: profiles/tests/test_registration.py:409
+#: profiles/tests/test_registration.py:949
+#: profiles/tests/test_user_detail.py:265
+#: profiles/tests/test_user_detail.py:548 profiles/validators.py:10
+msgid "This city is not valid."
+msgstr "Cette ville n’est pas valide."
+
+#: profiles/tests/test_registration.py:427
+#: profiles/tests/test_registration.py:926
+#: profiles/tests/test_user_detail.py:522
+msgid "A valid integer is required."
+msgstr "Un nombre entier valide est requis."
+
+#: profiles/tests/test_registration.py:994
+#: profiles/tests/test_user_detail.py:389
+msgid "ES IBANs must contain 24 characters."
+msgstr "Les IBAN doivent contenir 24 caractères."
+
+#: profiles/tests/test_registration.py:1040
+#: profiles/tests/test_user_detail.py:416
+msgid "A SWIFT-BIC is either 8 or 11 characters long."
+msgstr "Un SWIFT-BIC comporte 8 ou 11 caractères."
+
+#: profiles/tests/test_registration.py:1153
+#: profiles/tests/test_registration.py:1223
+#: profiles/tests/test_user_detail.py:574
+#: profiles/tests/test_user_detail.py:600
+msgid "Invalid pk \"0\" - object does not exist."
+msgstr "Pk “0” invalide - l’objet n’existe pas."
+
+#: profiles/tests/test_registration.py:1248
+#: profiles/tests/test_user_detail.py:629
+msgid "Ensure this value is less than or equal to 6."
+msgstr "Assurez-vous que cette valeur est inférieure ou égale à 6."
+
+#: profiles/tests/test_registration.py:1273
+#: profiles/tests/test_user_detail.py:658
+msgid "Ensure this value is less than or equal to 23."
+msgstr "Assurez-vous que cette valeur est inférieure ou égale à 23."
+
+#: profiles/tests/test_user_detail.py:217
+#: profiles/tests/test_user_detail.py:241
+msgid "Enter a valid URL."
+msgstr "Entrez une URL valide"

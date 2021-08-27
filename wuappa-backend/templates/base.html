@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+    <style type="text/css">
+
+        body { text-align: center; }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 18px;
+        }
+
+        .form{
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 18px;
+            padding: 30px;
+        }
+
+        .title {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            text-align: center !important;
+            margin-top: 20px;
+        }
+
+        .nav-bar {
+            left: 30px;
+            display: inline;
+            word-spacing: 10px;
+        }
+
+        .nav-bar li {
+            display: inline;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            list-style-type: none;
+        }
+
+        .nav-bar a{
+            text-align: center;
+            color: #E46D7A !important;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-bottom: 1px solid;
+        }
+
+        .messages{
+            display: inline;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            list-style-type: none;
+        }
+
+        button, .btn {
+            background: #E46D7A !important;
+            border-radius: 100px;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            transition: all 0.25s ease;
+            margin:20px 0;
+            padding: 10px;
+            border: 1px solid #E46D7A;
+            text-decoration: none;
+        }
+
+        button:hover {
+            border: 1px solid #E46D7A;
+            border-radius: 100px;
+            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 12px;
+            color: #E46D7A !important;
+            letter-spacing: 0;
+            background: white !important;
+            cursor:pointer;
+        }
+
+        p {
+            font-family: "Helvetica", "Arial", sans-serif;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+                background: #F5F5F5;
+                font-size: 12px;
+                color: white !important;
+                width: 100vw;
+                position: relative;
+                margin-left: -50vw;
+                height: auto;
+                left: 50%;
+                padding: 32px;
+        }
+
+        .footer a {
+            text-align: right;
+            color: #E46D7A !important;
+            border-bottom: 1px solid;
+        }
+
+        .footer img {
+            align-content: center;
+            display: inline;
+        }
+
+        .footer-style {
+            padding-right: 67px;
+        }
+
+        hr {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 1px;
+            background-color:  white !important;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .links {
+            text-align: center !important;
+        }
+
+        .reset {
+            text-align: center;
+            padding: 15px;
+        }
+
+        input {
+            border-radius: 50px;
+            height: 35px;
+            width: 27vw;
+            padding: 3px 10px;
+            border: 1px solid #E46D7A !important;
+        }
+
+        .errorlist {
+            color: slategrey;
+            list-style: none;
+        }
+
+        .errors-form {
+            padding-right: 40px;
+            color: slategrey;
+            list-style: none;
+        }
+
+        .form-row {
+            padding: 5px;
+        }
+
+        .form-row label{
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    {% load i18n %}
+    {% load static %}
+    {% block body %}
+    <div class="logo">
+        <img src="{% static "wuappa/img/wuappa-logo.png" %}" alt="wuappa-logo" height="55px">
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>

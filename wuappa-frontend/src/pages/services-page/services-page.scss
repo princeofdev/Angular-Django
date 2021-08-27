@@ -1,0 +1,34 @@
+page-services-page {
+    .title-text{
+        font-size: 18px;
+        color: #484B4B;
+        text-align: center;
+        width: 100%;
+    }
+    .service-button{
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 50px;
+        background-color: #ECEDED;
+        color: white;
+        font-size: 18px;
+    }
+    .clicked{
+        background-color: #484B4B;
+    }
+    .save-button{
+        width: 100%;
+        height: 44px;
+        text-align: center;
+        font-size: 18px;
+        background-color: #E46D7A;
+        color: white;
+        margin-top: 10%;
+        border-radius: 24.5px;
+    }
+    small {
+        display: block;
+        text-align: center;
+        margin: 30px 50px 0 50px; 
+    } 
+}

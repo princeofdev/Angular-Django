@@ -1,0 +1,12 @@
+export const TOKEN = "token";
+export const API_URL = process.env.API_URL || "https://app.wuappa.com";
+export const API_BASE_URL = API_URL + "/api/1.0/";
+export const STATIC_MAPS_API_KEY = "AIzaSyCnuJcb9SHIXMP7kEo9MwJklnkaSvd3f-s";
+export const MAPS_API_KEY = "AIzaSyBQAcGfBH6gz_vuLSdywV6KcAUMkCA2yYw";
+export const PENDING = "PEN";
+export const CONFIRMED = "ACP";
+export const CANCELED = "CAN";
+export const REJECT = "REJ";
+export const COMPLETED = "CMP";
+export const LOCATION_TIMEOUT = 10000; // miliseconds
+export const LANGUAGES = ["en", "fr"];

@@ -1,0 +1,78 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-header ion-icon.back-button-icon.icon {
+    color: map-get($colors, dark);
+    font-size: 22px;
+}
+
+.alert-button:last-child {
+    font-weight: 500!important;
+}
+
+ion-menu{
+    .custom{
+        background: map-get($colors, dark);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        .item-inner {
+            font-size: 20px;
+            border-bottom: 0 !important;
+            background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23cc6d7d'/></svg>") !important;
+            background-repeat: no-repeat !important;
+            background-position: 95%; 
+            background-size: 15px;
+        }
+        button:first-child {
+            border-top: 0 !important;
+        }
+        button:last-child{
+            border-bottom: 0 !important;
+        }
+        button{
+            color: #cc6d7d;
+            background: map-get($colors, dark);
+        }
+    }
+
+}
+
+ion-item.item-ios.ng-dirty.ng-invalid{
+    .item-inner{
+        border: 0!important;
+    }
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 16px;
+    padding-left: 0;
+    width: 96%;
+    border-bottom: 1px solid #E74C3C !important;
+}
+
+.item-md .item-inner {
+    box-shadow: 0 0 0 0 !important;
+    border-bottom-color: transparent !important;
+}
+
+ion-list, ion-item {
+    background: transparent !important;
+}
+
+.toolbar-ios ion-title{
+    padding: 0px !important;
+}

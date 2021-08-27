@@ -1,0 +1,27 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "WUAPPA - Account verified" %}{% endblock %}
+
+{% block content %}
+
+    <h1>{% trans "WUAPPA - Account verified" %}</h1>
+
+    <p>{% trans "Hello, welcome to WUAPPA." %}</p>
+    <p>
+        {% if request.GET.type != 'PRO' %}
+            {% blocktrans %}Your e-mail address has been confirmed, please go to the mobile app to sign in.{% endblocktrans %}
+        {% else %}
+            {% blocktrans %}We have received your documents, we will get in touch with you to activate your WUAPPA account.{% endblocktrans %}
+        {% endif %}
+    </p>
+    <p>
+        {% blocktrans %}Kind regards.{% endblocktrans %}
+    </p>
+    <p>
+        {% blocktrans %}WUAPPA TEAM!{% endblocktrans %}
+    </p>
+
+{% endblock %}

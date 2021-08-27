@@ -1,0 +1,89 @@
+page-account-page{
+    form{
+        width: 100%;
+    }
+
+    ion-label{
+        margin-top: 3% !important;
+        font-size: 16px !important;
+        font-family: 'Lucida Grande';
+        font-weight: 300;
+        color: #363939 !important;   
+        width: 100%;
+        align-self: flex-start;
+        display: block;
+    }
+    p{
+        margin-top: 5% !important;
+        font-size: 16px !important;
+        font-family: 'Lucida Grande';
+        color: #363939 !important;   
+        text-align: center;  
+    }
+    .item-inner{
+        border: 0px !important;
+    }
+    .next-btn{
+        width: 100%;
+        height: 52px;
+        background-color: #89898A;
+        text-align: center;
+        font-family: "Lucida Grande";
+        font-size: 16px;
+        border-radius: 8px;
+        
+        text-transform: capitalize;
+    }
+    .margin-top{
+        margin-top: 10%;
+    }
+    .item-ios, 
+    .item-md{
+        border: 0px !important;
+        padding-left: 0 !important;
+    }
+    .clear-input-button{
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: #eceded;
+        border-radius: 50%;
+        & ion-icon{
+            font-size: 24px;
+            color: black;
+        }
+    }
+    ion-input{
+        
+         font-size: 16px;
+         font-family: 'Lucida Grande';
+         font-weight: 300;
+         color: #363939 !important;
+         width: 100%;
+         border: 1px solid #ECEDED;
+         border-radius: 8px;
+         text-transform: uppercase;
+         .text-input,
+         .text-input-md{
+             margin-left: 0px !important;
+             padding-left: 10px !important;
+         }
+         
+     }
+    
+    .button{
+        margin-left: 93px;
+        font-size: 14px;
+        border-radius: 25px 25px 25px 25px;
+        font-family: 'Open Sans', sans-serif;
+        padding: 12px;
+        padding-left: 60px;
+        padding-right: 60px;
+        color: white;
+        background: #E46D7A;
+    }
+    
+    
+}

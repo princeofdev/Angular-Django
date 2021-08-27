@@ -1,0 +1,10 @@
+<ion-header>
+  <navbar [registerMode]="registerMode"></navbar>
+</ion-header>
+<ion-content padding>
+  <static-maps (onChange)="locationChange($event)"></static-maps>
+  <div class="error-label" [hidden]="!notPostalCode">
+    <ion-icon name="ios-warning"></ion-icon>
+    <p>{{ 'Sorry,we currently do not service in the indicated address. Please use another address.' | translate }}</p>
+  </div>
+</ion-content>

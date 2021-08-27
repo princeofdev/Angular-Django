@@ -1,0 +1,11 @@
+from django.conf import settings
+from django.utils.translation import ugettext as _
+
+SMS_VERIFICATION = settings.SMS_VERIFICATION
+
+BROKER_ENDPOINT = SMS_VERIFICATION.get('ENDPOINT')
+BROKER_USER = SMS_VERIFICATION.get('USER')
+BROKER_PASSWORD = SMS_VERIFICATION.get('PASSWORD')
+SENDER_ID = SMS_VERIFICATION.get('SENDER_ID')
+DEBUG_MODE = SMS_VERIFICATION.get('DEBUG', False)
+MESSAGE_TEMPLATE = SMS_VERIFICATION.get('MESSAGE_TEMPLATE', _('Your verification code is {0}'))

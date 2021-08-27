@@ -1,0 +1,18 @@
+<ion-header>
+<navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+<ion-content padding>
+    <h5 class="title-text">{{'DISTRICT' | translate}}:</h5>
+    <h6 class="subtitle-text">({{'SELECTSEVERAL' | translate}})</h6>
+    <div *ngIf="!editMode">
+        <cities-collapsable [zones]="zones" [citySelected]="citySelected" (removeZone)="deleteZone($event)" (collectZone)="addZone($event)" [zonesAdded]="zonesAdded"></cities-collapsable>
+        <button *ngIf="!editCityMode" class="next-btn" (click)="goToAccountPage()" ion-button [disabled]="zonesAdded.length == 0">{{'NEXT' | translate}}</button>
+        <button *ngIf="editCityMode" class="next-btn" (click)="updateUserCitiesAndZones()" ion-button [disabled]="zonesAdded.length == 0">{{'Update cities and zones' | translate}}</button>
+    </div>
+    <div *ngIf="editMode" class="workzones-wrapper">
+        <cities-collapsable [zones]="professionalZones" [citySelected]="citySelectedByUser" (removeZone)="deleteZone($event)" (collectZone)="addZone($event)" [zonesAdded]="zonesAdded"></cities-collapsable>
+        <button class="buttons" (click)="updateUserZones()" ion-button [disabled]="zonesAdded.length == 0">{{'Update zones' | translate}}</button>
+        <button class="alternate-button" (click)="goToUpdateCities()" ion-button>{{'Change State / City' | translate }} </button>
+    </div>
+</ion-content>

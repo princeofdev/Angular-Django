@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2 text-left>
+                    <button ion-button icon-only menuToggle *ngIf="!selectCardMode">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button ion-button icon-only (click)="closeModal()" *ngIf="selectCardMode">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </ion-col>
+                <ion-col col-8 text-center>
+                    <ion-title>{{ 'Payment methods' | translate }}</ion-title>
+                </ion-col>
+                <ion-col col-2 text-right>
+                    <button ion-button icon-only (click)="goToAddCardPage()">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-row>
+        <ion-list [hidden]="!isUIBlank()">
+            <img class="arrow" src="assets/imgs/arrow.png" alt="">
+            <div class="arrow-container">
+                <p class="title">{{ "You have not added any payment method, please add one." | translate }}</p>
+            </div>
+        </ion-list>
+        <ion-list [hidden]="!isUIIdeal()">
+            <ion-item [hidden]="!selectCardMode">
+                <p class="title">{{ "Select a payment option" | translate }}:</p>
+            </ion-item>
+            <ion-item *ngFor="let card of cards" (click)="selectCardMode && selectCard(card)">
+              <div item-start [hidden]="!selectCardMode">
+                <img class="option" src="assets/imgs/option.png" [hidden]="!isCardSelected(card)">
+                <img class="option" src="assets/imgs/option_empty.png" [hidden]="isCardSelected(card)">
+              </div>
+              <img class="card-img" src="assets/imgs/visa_icon.png" item-start>
+              <ion-label>
+                <h2>{{card.brand}} {{'ending in' | translate}} {{card.last4}}</h2>
+                <p text-left>{{'Expires' | translate}}: {{card.exp_month}}/{{card.exp_year}}</p>
+              </ion-label>
+              <ion-icon item-end name="trash" [hidden]="selectCardMode" (click)="deleteCard(card)"></ion-icon>
+            </ion-item>
+            <button class="continue-button" [hidden]="!selectCardMode" [disabled]="!selectedCard" (click)="returnSelectedCard()">{{'CONTINUE' | translate}}</button>
+        </ion-list>
+    </ion-row>
+</ion-content>

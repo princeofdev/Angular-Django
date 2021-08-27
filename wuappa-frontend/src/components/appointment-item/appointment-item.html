@@ -1,0 +1,25 @@
+<button ion-item class="appointment-button" (click)="goToDetail()">
+  <ion-thumbnail item-left>
+    <img [src]="picture" alt="">
+  </ion-thumbnail>
+  <div>
+    <div class="input-wrapper">
+      <h2><appointment-services [services]="appointment.services"></appointment-services></h2>
+      <h3 *ngIf="userType == 'FIN' && appointment.professional">{{appointment.professional.first_name}} {{appointment.professional.last_name}}</h3>
+      <h3 *ngIf="userType == 'PRO'">{{appointment.client.first_name}} {{appointment.client.last_name}}</h3>
+      <p>{{date}} {{time}}</p>
+    </div>
+  </div>
+  <div item-right *ngIf="appointment.status == 'CMP'">
+    <ion-icon class="checkmark" name="checkmark"></ion-icon>
+    <ion-icon class="arrow" name="ios-arrow-forward"></ion-icon>
+  </div>
+  <div item-right *ngIf="appointment.status == 'ACP'">
+    <span class="hour-confirmed">{{time}}</span>
+    <ion-icon class="arrow" name="ios-arrow-forward"></ion-icon>
+  </div>
+  <div item-right *ngIf="appointment.status == 'PEN'">
+    <ion-icon class="clock" [ngClass]="{'out-time': condicion}" name="ios-clock-outline"></ion-icon>
+    <ion-icon class="arrow" name="ios-arrow-forward"></ion-icon>
+  </div>
+</button>

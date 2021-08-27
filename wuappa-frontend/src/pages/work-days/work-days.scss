@@ -1,0 +1,125 @@
+page-work-days{
+  ion-navbar {
+    .fa {
+      font-size:1.5em;
+      color: black;
+    }
+  }
+    ion-content{
+        ion-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .text{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .text-week{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .title-text{
+        font-size: 18px;
+        color: #484B4B;
+        text-align: center;
+        width: 100%;
+        border: 1px solid #eceded;
+        border-radius: 24.5px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+        font-family: "Lucida Grande";
+    }
+    .hour-button{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left:   10%;
+        padding-right: 10%;
+        background-color: #fff;
+        color: #484B4B;
+        border: 1px solid #eceded;
+        font-size: 15px;
+        display: inline;
+        margin: 2%;
+        margin-bottom: 10%;
+        font-weight: lighter;
+        font-family: "Lucida Grande";
+        border-radius: 24px;
+    }
+    .day-button{
+       background-color: #fff;
+       display: inline;
+       border-radius: 50%;
+       padding: 3% 0;
+       font-size: .8em;
+       text-align: center;
+       border: 1px solid #eceded;
+       width: 43px;
+       height: 43px;
+       border-radius: 50%;
+       margin: 0 1px;
+    }
+    .clicked{
+        background-color: #484B4B;
+        color: #fff;
+    }
+    .save-button{
+        width: 100%;
+        height: 44px;
+        text-align: center;
+        font-size: 18px;
+        background-color: #E46D7A;
+        color: white;
+        margin-top: 5%;
+        border-radius: 24.5px;
+    }
+    ion-calendar-month .primary .days .on-selected,
+    ion-calendar-month .primary .startSelection button.days-btn,
+    ion-calendar-month .primary .endSelection button.days-btn{
+        background-color: #E46D7A;
+    }
+    ion-calendar .title .switch-btn{
+        color: #E46D7A ;
+    }
+    ion-calendar .title .switch-btn .arrow-dropdown{
+        display: none;
+    }
+    ion-calendar .title{
+        padding: 0 120px 0 120px;
+    }
+    .week-title li{
+        color: #484B4B;
+    }
+    .today p{
+        color: #E46D7A;
+    }
+    .calendar{
+        margin-top: 5%;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.18);
+        padding-top: 5%;
+        padding-bottom: 5%;
+        .title-calendar{
+            color: #484B4B;
+            font-family: "Lucida Grande";
+            font-size: 12px;
+        }
+    }
+
+    .last-child{
+        button:last-child{  
+            padding-right: 30%;
+            padding-left: 30%;
+            padding-top: 11%;
+            padding-bottom: 11%;
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+page-user-calendar {
+
+    .save-button{
+        width: 100%;
+        height: 44px;
+        text-align: center;
+        font-size: 18px;
+        background-color: #E46D7A;
+        color: white;
+        margin-top: 10%;
+        border-radius: 24.5px;
+    }
+     /*TIME PICKER*/
+
+     ion-item{
+         .item-inner{
+             border-bottom: 0px !important;
+         }
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+     }
+
+        .hour-button{
+        width: 100%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+        background-color: #fff;
+        color: #484B4B;
+        border: 1px solid #eceded !important;
+        font-size: 15px;
+        display: inline;
+        margin: 3%;
+        font-family: "Lucida Grande";
+        border-radius: 24.5px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    ion-datetime{
+        margin-top: 20px;
+        position: relative;
+    }
+    ion-icon.dropdown-timepicker{
+        position: absolute;
+        right: 16px;
+        top: 58px;
+        font-size: 16px;
+    }
+
+    .day-complete-label{
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+        color: #E74C3C;
+    }
+
+    .timepicker-box{
+        width: 100%;
+    }
+}

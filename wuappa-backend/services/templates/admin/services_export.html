@@ -1,0 +1,38 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+
+{% load admin_static %}
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
+
+{% endblock %}
+
+
+{% block content %}
+
+    <form method="post">{% csrf_token %}
+    <h1>Generate services report</h1>
+    <fieldset class="module aligned ">
+        <div class="form-row field-name">
+            <div>
+                <label for="id_subject" class="required">Start date:</label>
+                <input type="date" id="start_date" name="start_date" class="vTextField" value="{{ start_date }}" required />
+            </div>
+        </div>
+
+        <div class="form-row field-users">
+            <div>
+                <label for="id_users" class="required">Finish date:</label>
+                <input type="date" id="finish_date" name="finish_date" class="vTextField" value="{{ finish_date }}" required />
+            </div>
+        </div>
+
+
+    </fieldset>
+    <div class="submit-row">
+        <input id="submit-btn-2" type="submit" value="Generate" class="default" name="_save">
+    </div>
+    </form>
+
+{% endblock %}

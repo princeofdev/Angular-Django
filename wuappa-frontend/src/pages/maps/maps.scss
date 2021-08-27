@@ -1,0 +1,29 @@
+page-maps {
+
+    .scroll-content{
+        padding: 0px !important;
+    }
+
+    static-maps{
+        height: 100%;
+    }
+
+    
+    .error-label{
+        background-color: #FF6660;
+        border-radius: 50px;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        position: absolute;
+        top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        ion-icon,p{
+            color: white;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+<ion-header>
+   <navbar [title]="title" [registerMode]="registerMode" ></navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="settings-data">
+        <ion-row>
+            <ion-list>
+                <div class="icon-list">
+                    <ion-icon name="ios-list"></ion-icon>
+                </div>
+                <ion-label>
+                    <strong>{{'ADDRESS' | translate}}</strong>
+                    <p>{{address}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'SERVICE' | translate}}</strong>
+                    <p>{{services}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'DATE' | translate}}</strong>
+                    <p>{{date}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'TOTALPRICE' | translate}}</strong>
+                    <p>{{price}} {{currency}}</p>
+                </ion-label>
+                <ion-label *ngIf="special_price">
+                    <strong>{{'Special price' | translate}}</strong>
+                    <p>{{special_price}} {{currency}}</p>
+                </ion-label>
+                <ion-label class="coupon" [hidden]="couponValid">
+                    <strong>{{'DIS' | translate}}</strong>
+                    <div class="coupon-box">
+                        <ion-input [(ngModel)]="coupon_code" [ngClass]="cuponStyle()" placeholder="{{'DIS' | translate}}"></ion-input>
+                        <button ion-button class="coupon-button" (click)="checkCoupon()">{{'APPLY' | translate}}</button>
+                    </div>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'COMMENT' | translate}}</strong>
+                    <!-- <p *ngIf="type=='resume'">{{comment}}</p> -->
+                    <ion-textarea [(ngModel)]="comment" type="text"></ion-textarea>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'PAYMENTMETHOD' | translate}}</strong>
+                    <button *ngIf="!card" (click)="goToPaymentsPage()" class="add-payment">
+                      <ion-icon name="md-add"></ion-icon>
+                      {{'Add a payment method to continue' | translate}}
+                    </button>
+                    <p *ngIf="card">
+                      <button (click)="goToPaymentsPage()" class="change-payment">
+                        {{'change' | translate}}
+                      </button>
+                      <ion-icon name="ios-card"></ion-icon>
+                      <span class="card-name">{{ card.name }}</span>
+                      <span class="card-data">{{card.brand}} {{'finished in' | translate}} {{card.last4}}</span>
+                      <span class="card-expires">{{'Expires' | translate}}: {{card.exp_month}}/{{card.exp_year}}</span>
+                    </p>
+                </ion-label>
+                <button [disabled]="!card"  *ngIf="type=='resume'" class="finish-button" (click)="goToFinishOrder()">{{'CONFIRM-BTN' | translate}}</button>
+            </ion-list>
+        </ion-row>
+    </div>
+</ion-content>

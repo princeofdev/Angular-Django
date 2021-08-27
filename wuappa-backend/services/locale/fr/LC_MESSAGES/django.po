@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-01 11:49+0100\n"
+"PO-Revision-Date: 2018-02-16 00:29+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: services/admin.py:30
+msgid "Category Name"
+msgstr "Nom de catégorie"
+
+#: services/admin.py:43
+msgid "Client email"
+msgstr "Courriel du client"
+
+#: services/admin.py:48
+msgid "Professional email"
+msgstr "Email professionnel"
+
+#: services/admin.py:52
+msgid "Date"
+msgstr "Date"
+
+#: services/admin.py:56
+msgid "Time"
+msgstr "Heure"
+
+#: services/models.py:55
+msgid "City"
+msgstr "Ville"
+
+#: services/models.py:56 services/models.py:66
+msgid "Service"
+msgstr "Service"
+
+#: services/models.py:65
+msgid "User"
+msgstr "Utilisateur"
+
+#: services/models.py:73
+msgid "Client"
+msgstr "Client"
+
+#: services/models.py:75
+msgid "Professional"
+msgstr "Professionnel"
+
+#: services/serializers.py:99 services/serializers.py:104
+msgid "Coupon does not exist or is already used"
+msgstr "Le coupon n’existe pas ou est déjà utilisé"
+
+#: services/serializers.py:110 services/tests/test_create_hire_services.py:165
+#: services/tests/test_create_hire_services.py:305
+#: services/tests/test_create_hire_services.py:361
+#: services/tests/test_create_hire_services.py:417
+#: services/tests/test_create_hire_services.py:472
+#: services/tests/test_create_hire_services.py:527
+#: services/tests/test_create_hire_services.py:582
+#: services/tests/test_create_hire_services.py:637
+#: services/tests/test_create_hire_services.py:692
+#: services/tests/test_create_hire_services.py:830
+msgid "This field is required."
+msgstr "Ce champ est obligatoire"
+
+#: services/serializers.py:112 services/tests/test_create_hire_services.py:720
+msgid "This list may not be empty."
+msgstr "Cette liste peut ne pas être vide."
+
+#: services/serializers.py:120
+#, python-format
+msgid "Invalid pk \"%s\" - object does not exist."
+msgstr "Pk “% s” invalide - l’objet n’existe pas."
+
+#: services/serializers.py:126 services/serializers.py:203
+#: services/tests/test_create_hire_services.py:222
+msgid "Client user must be a final client, not professional"
+msgstr "L’utilisateur client doit être un client final, pas professionnel"
+
+#: services/serializers.py:130 services/tests/test_create_hire_services.py:278
+msgid "Professional user must be a professional"
+msgstr "L’utilisateur professionnel doit être un professionnel"
+
+#: services/serializers.py:135 services/views.py:315
+msgid "The selected date and time is in the past."
+msgstr "La date et l’heure sélectionnées sont dans le passé."
+
+#: services/serializers.py:140 services/serializers.py:208
+msgid "Client just register in stripe. Not linked credit cards"
+msgstr ""
+"Le client vient de s’inscrire dans la bande. Cartes de crédit non liées"
+
+#: services/serializers.py:144 services/serializers.py:212
+#: services/tests/test_create_hire_services.py:917
+#: services/tests/test_update_hire_services.py:85
+msgid "Credit card number not belongs to the client"
+msgstr "Le numéro de carte de crédit n’appartient pas au client"
+
+#: services/serializers.py:148 services/tests/test_create_hire_services.py:775
+msgid "Total amount_must_be_included"
+msgstr ""
+
+#: services/serializers.py:173
+msgid "Invalid price"
+msgstr "Prix invalide"
+
+#: services/serializers.py:201 services/tests/test_update_hire_services.py:66
+msgid "Only client for the hire services can update credit card"
+msgstr ""
+"Seul le client pour les services de location peut mettre à jour la carte de "
+"crédit"
+
+#: services/serializers.py:228 services/serializers.py:244
+#: services/tests/test_accept_hire_service.py:64
+#: services/tests/test_complete_hire_service.py:79
+msgid "User must be a professional."
+msgstr "L’utilisateur doit être un professionnel."
+
+#: services/serializers.py:247 services/tests/test_complete_hire_service.py:110
+msgid "Only professional for the hire services can complete the service."
+msgstr ""
+"Seul un professionnel pour les services de location peut compléter le "
+"service."
+
+#: services/serializers.py:265 services/tests/test_review_hire_service.py:74
+msgid "User must be a final."
+msgstr "L’utilisateur doit être une finale."
+
+#: services/serializers.py:268 services/tests/test_review_hire_service.py:148
+msgid "Only client for the hire services can review the service."
+msgstr "Seul le client pour les services de location peut examiner le service."
+
+#: services/settings.py:10
+msgid "Active"
+msgstr "Actif"
+
+#: services/settings.py:11
+msgid "Inactive"
+msgstr "Inactif"
+
+#: services/settings.py:18
+msgid "Public"
+msgstr "Public"
+
+#: services/settings.py:19
+msgid "Private"
+msgstr "Privé"
+
+#: services/settings.py:28
+msgid "Pending"
+msgstr "En attente"
+
+#: services/settings.py:29
+msgid "Accept"
+msgstr ""
+
+#: services/settings.py:30
+msgid "Complete"
+msgstr "Complet"
+
+#: services/settings.py:31
+msgid "Cancel"
+msgstr "Annuler"
+
+#: services/settings.py:32
+msgid "Reject"
+msgstr "Rejeter"
+
+#: services/tests/test_accept_hire_service.py:79
+msgid "Invalid pk \"2\" - object does not exist."
+msgstr "Pk “2” invalide - l’objet n’existe pas."
+
+#: services/tests/test_accept_hire_service.py:94 services/views.py:179
+msgid "Services has assigned to another professional"
+msgstr "Les services ont affecté à un autre professionnel"
+
+#: services/tests/test_complete_hire_service.py:94
+#: services/tests/test_review_hire_service.py:90
+msgid "Invalid pk \"4\" - object does not exist."
+msgstr "Pk “4” invalide - l’objet n’existe pas."
+
+#: services/tests/test_create_hire_services.py:193
+#: services/tests/test_create_hire_services.py:250
+#: services/tests/test_create_hire_services.py:748
+msgid "Invalid pk \"0\" - object does not exist."
+msgstr "Pk “0” invalide - l’objet n’existe pas."
+
+#: services/tests/test_create_hire_services.py:334
+msgid ""
+"Date has wrong format. Use one of these formats instead: YYYY[-MM[-DD]]."
+msgstr ""
+"La date a un mauvais format. Utilisez l’un de ces formats à la place: YYYY [-"
+"MM [-DD]]."
+
+#: services/tests/test_create_hire_services.py:390
+msgid ""
+"Time has wrong format. Use one of these formats instead: hh:mm[:ss[.uuuuuu]]."
+msgstr ""
+"Le temps a un mauvais format. Utilisez l’un de ces formats à la place: hh: "
+"mm [: ss [.uuuuuu]]."
+
+#: services/tests/test_create_hire_services.py:445
+#: services/tests/test_create_hire_services.py:500
+#: services/tests/test_create_hire_services.py:555
+#: services/tests/test_create_hire_services.py:610
+#: services/tests/test_create_hire_services.py:665
+#: services/tests/test_create_hire_services.py:858
+#: services/tests/test_review_hire_service.py:128
+#: services/tests/test_update_hire_services.py:116
+msgid "This field may not be blank."
+msgstr "Ce champ ne peut pas être vide."
+
+#: services/tests/test_create_hire_services.py:803
+msgid "A valid number is required."
+msgstr "Un nombre valide est requis."
+
+#: services/tests/test_create_hire_services.py:886
+#: services/tests/test_update_hire_services.py:132 services/validators.py:11
+msgid "Credit card id is not included in app."
+msgstr ""
+"L’identifiant de la carte de crédit n’est pas inclus dans l’application."
+
+#: services/tests/test_review_hire_service.py:109
+msgid "Ensure this value is less than or equal to 5."
+msgstr "Assurez-vous que cette valeur est inférieure ou égale à 5."
+
+#: services/views.py:192
+#, fuzzy, python-format
+#| msgid "Charge for hire services id %%(id)s"
+msgid "Charge for hire services id %(id)s"
+msgstr "Frais pour les services de location id %%(id)s"
+
+#: services/views.py:197
+msgid "Charge add to client card."
+msgstr "Charge ajouter à la carte client."
+
+#: services/views.py:216
+msgid "Added Review to hire services."
+msgstr "Examen ajouté pour embaucher des services."
+
+#: services/views.py:236
+msgid "Services can't be cancel. Service date has passed."
+msgstr ""
+"Les services ne peuvent pas être annulés. La date de service est passée."
+
+#: services/views.py:245
+#, fuzzy, python-format
+#| msgid "Service cancel: Charge for hire services id %%(id)s."
+msgid "Service cancel: Charge for hire services id %(id)s."
+msgstr ""
+"Annulation du service: facturation des services de location id %%(id)s."
+
+#: services/views.py:253
+#, fuzzy, python-format
+#| msgid "Services can't be cancel. Service status is %%(status)s."
+msgid "Services can't be cancel. Service status is %(status)s."
+msgstr ""
+"Les services ne peuvent pas être annulés. L’état du service est %%(status)s."
+
+#: services/views.py:288
+#, python-brace-format
+msgid "Your WUAPPER {0} is on its way"
+msgstr "Votre WUAPPER {0} est en route"
+
+#: services/views.py:322
+msgid "Services included are not included for that work zone"
+msgstr "Les services inclus ne sont pas inclus pour cette zone de travail"
+
+msgid "You have pending services available"
+msgstr "Vous avez des services en attente disponibles"
+
+msgid "Service on {0} at {1} accepted by {2} {3}"
+msgstr "Service sur {0} à {1} accepté par {2} {3}"
+
+msgid "Service on {0} at {1} canceled by {2} {3}"
+msgstr "Service sur {0} à {1} annulé par {2} {3}"
+
+msgid "Service on {0} at {1} completed by {2} {3}"
+msgstr "Service sur {0} à {1} complété par {2} {3}"
+
+msgid "The selected date is not enough to hire services."
+msgstr "Fates le rdv 2hrs avant le temp desiré!"

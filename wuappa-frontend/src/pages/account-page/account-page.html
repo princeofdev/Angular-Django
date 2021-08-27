@@ -1,0 +1,19 @@
+<ion-header>
+ <navbar *ngIf="edit" [title]="title"></navbar>
+ <navbar *ngIf="!edit" [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+<ion-content padding>
+    <ion-row>
+        <form [formGroup]="accountForm" (submit)="goToDocumentationPage()">
+            <ion-label>{{ 'Account holder' | translate }}</ion-label>
+            <ion-input formControlName="account_name" required></ion-input>
+            <ion-label>{{ 'SWIFT code' | translate }}</ion-label>
+            <ion-input (keyup)="onKey($event)" formControlName="swift_bank_account" required></ion-input>
+            <ion-label>{{ 'IBAN code' | translate }}</ion-label>
+            <ion-input (keyup)="onKey($event)" formControlName="iban_bank_account" required></ion-input>
+            <p *ngIf="!edit"> {{ "On this account you will receive payments." | translate }}</p>
+            <button *ngIf="!edit" class="button" type="submit" ion-button [disabled]="accountForm.invalid">{{'NEXT' | translate}}</button>
+            <button *ngIf="edit" class="button margin-top" type="submit" ion-button [disabled]="accountForm.invalid">{{'SAVE' | translate}}</button>
+        </form>
+    </ion-row>
+</ion-content>

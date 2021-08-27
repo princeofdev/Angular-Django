@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-06 19:06+0100\n"
+"PO-Revision-Date: 2018-02-16 00:04+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: geo/admin.py:24
+msgid "Regions/States"
+msgstr "Régions/ États"
+
+#: geo/admin.py:30
+msgid "Cities"
+msgstr "Villes"
+
+#: geo/admin.py:36
+msgid "Work zones"
+msgstr "Zones de travail"
+
+#: geo/admin.py:62
+msgid "Region/State"
+msgstr "Région/État"
+
+#: geo/admin.py:67
+msgid "Country"
+msgstr "Pays"
+
+#: geo/models.py:39
+msgid "Separate zip codes using a blank space"
+msgstr "Séparez les codes postaux en utilisant un espace vide"

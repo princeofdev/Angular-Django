@@ -1,0 +1,34 @@
+page-terms-conditions-menu {
+    .terms-conditions-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ion-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h6{
+           margin-bottom: 22px;
+           font-size: 16px;
+           color: #484B4B;
+           font-weight: 300;
+           font-family: "Open Sans";
+       }
+    }
+    .terms-conditions-box{
+        width: 100%;
+        height: 524px;
+        border: 1px solid #DBDBDC;
+        border-radius: 8px;
+        overflow-y: scroll;
+        font-family: "Open Sans";
+        font-weight: 400;
+        & p{
+            padding: 15px;
+            margin: 0px !important;
+            text-align: justify;
+        }
+    }
+
+}

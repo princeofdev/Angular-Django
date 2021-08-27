@@ -1,0 +1,62 @@
+<ion-header>
+  <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row class="signup-box">
+    <button ion-button type="button" class="facebook-button" (click)="signupFb()" *ngIf="userType == 'FIN'">{{'SIGNUP-FACEBOOK-BUTTON' | translate}}</button>
+    <h6>{{'REGISTRATION-DATA' | translate}}:</h6>
+    <form [formGroup]="form">
+    <ion-list class="signup-form">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-person"></ion-icon>
+        </ion-label>
+        <ion-input formControlName="name" placeholder="{{'SIGNUP-NAME' | translate}}" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-person"></ion-icon>
+        </ion-label>
+        <ion-input formControlName="surname" placeholder="{{'SIGNUP-SURNAME' | translate}}" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-call"></ion-icon>
+          {{ 'Phone country prefix' | translate }}
+        </ion-label>
+        <ion-select placeholder="{{ 'Phone country prefix' | translate }}" formControlName="prefix" okText="{{'OK' | translate}}" cancelText="{{'Cancel' | translate}}" required>
+          <ion-option value="{{country[1]}}" *ngFor="let country of countries">{{country[0]}} ({{country[1]}})</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-call"></ion-icon>
+        </ion-label>
+        <ion-input type="tel" formControlName="phoneNumber" placeholder="{{'SIGNUP-MOBILE' | translate}}" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-mail"></ion-icon>
+        </ion-label>
+        <ion-input type="email" formControlName="email" placeholder="{{'SIGNUP-EMAIL' | translate}}" required></ion-input>
+      </ion-item>
+      <ion-item [ngClass]="{'incorrect-code-input': !passwordsMatch()}">
+      <ion-label>
+        <ion-icon name="ios-lock"></ion-icon>
+      </ion-label>
+        <ion-input formControlName="password1" type="password" placeholder="{{'SIGNUP-PASSWORD' | translate}}" required></ion-input>
+      </ion-item>
+      <ion-item [ngClass]="{'incorrect-code-input': !passwordsMatch()}">
+      <ion-label>
+        <ion-icon name="ios-lock"></ion-icon>
+      </ion-label>
+        <ion-input formControlName="password2" type="password" placeholder="{{'SIGNUP-CONFIRM-PASSWORD' | translate}}" required></ion-input>
+      </ion-item>
+    </ion-list>
+    </form>
+        <p class="error-text" [hidden]="passwordsMatch()">{{'NOT-EQUAL-PASSWORD' | translate }}</p>
+    <button ion-button class="add-style-button" [disabled]="!isFormValid()" (click)="validateForm()">{{'SIGNUP-BUTTON' | translate}}</button>
+  </ion-row>
+</ion-content>

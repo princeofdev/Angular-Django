@@ -1,0 +1,21 @@
+stages:
+  - upload
+  - build
+
+upload to ionic:
+  image: kasfactory/gitlab-ci-git-push
+  stage: upload
+  only:
+      - master
+  environment:
+    name: ionic
+  script:
+    - git-push git@git.ionicjs.com:kasfactory/wuappa.git
+
+optimized build:
+  stage: build
+  image: node:9.11.1
+  before_script:
+    - npm install -g cordova ionic && npm install
+  script:
+    - ionic cordova build browser --prod

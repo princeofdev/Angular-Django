@@ -1,0 +1,32 @@
+    <ion-header>
+        <navbar [title]="title"></navbar>
+    </ion-header>
+    <ion-content padding>
+        <ion-row *ngIf="layout == 'hour'">
+            <h5 class="title-text">{{'Select the services you perform' | translate}}:</h5>
+            <ion-col col-6 text-center>
+                <p class="text">{{'Mornings' | translate}}</p>
+            </ion-col>
+            <ion-col col-6 text-center>
+                <p class="text">{{'Afternoons' | translate}} </p>
+            </ion-col>
+            <button class="hour-button"  (click)="switchHour(hour)" >
+                    08:00 - 09:00
+            </button>
+            <button class="hour-button"  (click)="switchHour(hour)" >
+                    09:00 - 10:00
+            </button>
+        </ion-row>
+        <ion-row *ngIf="layout == 'calendar'">
+           <!-- <h5 class="title-text">{{'Set your holidays' | translate}}:</h5> -->
+           <span class="title-calendar">{{'Set your holidays' | translate}}:</span>
+
+            <calendar [date]="date" (onChange)="onChange($event)" [type]="type" [format]="'YYYY-MM-DD'" [options]="options"></calendar>
+        </ion-row>
+        <ion-row *ngIf="layout == 'calendar'" >
+                <!-- <button class="save-button" [disabled]="date.length == 0" (click)="layout='hour'">{{'Select hours' | translate}}</button>                 -->
+        </ion-row>
+        <ion-row *ngIf="layout == 'hour'">
+            <button class="save-button" [disabled]="selectedHours.length == 0" >{{'SAVE' | translate}}</button>
+        </ion-row>
+    </ion-content>

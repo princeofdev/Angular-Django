@@ -1,0 +1,16 @@
+<div class="item-container">
+  <div class="image-box">
+    <img [src]="item.service.image" alt="{{item.service.name}}">
+  </div>
+  <div class="service-box">
+    <div class="description-box">
+      <h6>{{item.service.name}}</h6>
+      <p>{{item.price | number: '2.2-2' }} {{item.price_currency}}</p>
+      <div class="counter-box">
+        <i class="fa fa-minus-circle" (click)="decrementService()" aria-hidden="true"></i>
+        <p>{{item.count}}</p>
+        <i class="fa fa-plus-circle" (click)="incrementService()" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>

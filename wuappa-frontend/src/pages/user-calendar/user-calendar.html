@@ -1,0 +1,23 @@
+<ion-header>
+    <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <calendar [title]="''" [options]="options" [format]="format" (onChange)="onChange($event)"></calendar>
+  </ion-row>
+  <ion-row *ngIf="date != null">
+    <div class="timepicker-box">
+      <ion-item>
+        <ion-datetime placeholder="{{'Select an hour' | translate}}" displayFormat="HH:mm" [(ngModel)]="hour" class="hour-button" (ngModelChange)="checkAvailability($event)" [(hourValues)]="hourValues" [(minuteValues)]="minuteValues">
+        </ion-datetime>
+      </ion-item>
+    </div>
+    <div *ngIf="isUIError()">
+      <h6 class="day-complete-label">{{'Hour complete' | translate}}</h6>
+    </div>
+  </ion-row>
+  <ion-row>
+    <button class="save-button" [disabled]="!dateAvailable" (click)="goToResume()">{{'NEXT' | translate}}</button>
+  </ion-row>
+</ion-content>

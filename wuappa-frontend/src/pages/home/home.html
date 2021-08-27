@@ -1,0 +1,47 @@
+<ion-header>
+  <navbar title="{{ 'Select your service' | translate }}" [registerMode]="registerMode"></navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let category of categories">
+      <ion-col>
+        <ion-row (click)="getServicesByCategoryAndZip(category, postal_code)">
+          <ion-col>
+            <p>{{category.name}}</p>
+            <div class="container">
+                <img class="category-image" *ngIf="category.image" src="{{category.image}}">
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row [hidden]="selectedCategory.id != category.id">
+          <ion-col>
+            <div>
+              <ion-list>
+                <ion-item class="ion-item" *ngFor="let service of category.services">
+                  <service-card [service]='service' (click)="goToServiceDetail(service, category.services)"></service-card>
+                </ion-item>
+              </ion-list>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+            <ion-col>
+              <ion-row>
+                <ion-col>
+                  <p style="top: calc(50% - 30px)">{{'Make up' | translate}}</p>
+                  <p style="margin-top: 20px">{{'Coming soon' | translate}}</p>
+
+                  <div class="container">
+                    <img class="category-image" src="assets/imgs/makeup.jpg">
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+    </ion-row> -->
+    <ion-row class="no-categories" *ngIf="isUIBlank()" >
+        <h5>{{'There are no services in this address' | translate}}</h5>
+    </ion-row>
+  </ion-grid>
+</ion-content>

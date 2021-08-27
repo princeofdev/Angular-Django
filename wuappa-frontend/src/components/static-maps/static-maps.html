@@ -1,0 +1,8 @@
+<div class="map placeholder">
+  <ion-spinner></ion-spinner>
+  <div class="real map" [ngStyle]="getBackgroundImage()"></div>
+  <map-searchbar (onChange)="changeLocation($event)" [coords]="coords"></map-searchbar>
+  <button ion-button (click)="useCurrentAddress()">
+    {{ 'Use my current location' | translate }}
+  </button>
+</div>

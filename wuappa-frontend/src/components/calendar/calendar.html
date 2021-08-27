@@ -1,0 +1,7 @@
+<!-- Generated template for the CalendarComponent component -->
+<ion-row  class="calendar">
+  <div class="title-calendar">
+    <span>{{title}}</span>
+  </div>
+  <ion-calendar [(ngModel)]="date" (onChange)="changeDay($event)" [type]="type" [format]="'YYYY-MM-DD'" [options]="options"></ion-calendar>
+</ion-row>

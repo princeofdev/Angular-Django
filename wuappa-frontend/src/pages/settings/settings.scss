@@ -1,0 +1,176 @@
+page-settings {
+
+
+    .label-md {
+        margin: 11px 8px 11px 0;
+    }
+    .text-input {
+        margin: 11px 8px 11px 0;
+        padding: 0;
+        width: calc(100% - 8px);
+        border: 0px !important;
+    }
+    .profile-image{
+        background-size: cover;
+        background-position: center;
+        height: 250px !important;
+        width: 100% !important;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+            image-uploader{
+                font-size: 40px;
+                color: black;
+            }
+
+        .edit-button{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 15px;
+            bottom: -20px;
+            z-index: 3;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+            & i{
+                font-size: 18px;
+            }
+        }
+    }
+
+    ion-list{
+        width: 100%;
+    }
+
+    .language-item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ion-item{
+        border: 0px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        & h4{
+            font-size: 20px !important;
+            font-family: 'Open Sans';
+            margin-bottom: 12px;
+        }
+        & p{
+            font-size: 16px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            color: #363939 !important;
+        }
+
+        & ion-label{
+            margin-top: 10% !important;
+            h4{
+                font-size: 20px !important;
+                font-family: 'Open Sans';
+                font-weight: 300;
+            }
+            p{
+                margin-top: 3% !important;
+                font-size: 16px !important;
+                font-family: 'Open Sans';
+                font-weight: 300;
+                font-weight: 300;
+                color: #363939 !important;
+            }
+            width: 100%;
+            align-self: flex-start;
+            font-size: 20px !important;
+            font-family: 'Open Sans';
+            font-weight: 300;
+        }
+        .text-input[disabled]{
+            opacity: 1 !important;
+        }
+        & ion-input{
+            font-size: 16px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-weight: 300;
+            color: #363939 !important;
+            width: 100%;
+            border: 1px solid #ECEDED;
+            border-radius: 8px;
+            margin: 0 !important;
+            padding: 0 !important;
+            .text-input {
+                margin: 0px !important;
+                padding: 10px !important;
+            }
+        }
+
+        & ion-select{
+            font-size: 16px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-weight: 300;
+            color: #363939 !important;
+            width: 100% !important;
+            border: 1px solid #ECEDED;
+            border-radius: 8px;
+            max-width: 100% !important;
+            // margin: 0 !important;
+            // padding: 0 !important;
+            & button{
+                height: 0 !important;
+            }
+        }
+        & .clear-input-button{
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: #eceded;
+            border-radius: 50%;
+            & ion-icon{
+                font-size: 24px;
+                color: black;
+            }
+        }
+        & .go-to-change-password{
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            margin-right: 0 !important;
+            background-color: #ffffff;
+            border-radius: 50%;
+            & ion-icon{
+                font-size: 24px;
+                color: black;
+            }
+        }
+    }
+
+    .item-ios.item-block .item-inner,
+    .item-md.item-block .item-inner{
+        border-bottom: 0px !important;
+    }
+    .forward-icon{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        font-size: 25px;
+
+    }
+
+
+}

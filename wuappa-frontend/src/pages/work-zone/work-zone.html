@@ -1,0 +1,38 @@
+<ion-header>
+<navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>{{'COUNTRY' | translate}}:</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{'COUNTRY' | translate}}:</ion-label>
+            <ion-select [(ngModel)]="countrySelected" (ngModelChange)="onCountryChange($event)" okText="{{'OK' | translate}}" cancelText="{{'Cancel' | translate}}" placeholder="{{'Select a country' | translate}}">
+                <ion-option value="{{country.id}}" *ngFor="let country of countries">{{country.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item [hidden]="!countrySelected">
+            <ion-label>{{'PROVINCE-STATE' | translate}}:</ion-label>
+        </ion-item>
+        <ion-item [hidden]="!countrySelected">
+            <ion-label>{{'PROVINCE-STATE' | translate}}:</ion-label>
+            <ion-select [(ngModel)]="regionSelected" (ngModelChange)="onRegionChange($event)" okText="{{'OK' | translate}}" cancelText="{{'Cancel' | translate}}" placeholder="{{'Select a province/state' | translate}}" multiple="true">
+                <ion-option value="{{region.id}}" *ngFor="let region of regions">{{region.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item [hidden]="!regionSelected">
+            <ion-label>{{'CITY' | translate}}:</ion-label>
+        </ion-item>
+        <ion-item [hidden]="!regionSelected">
+            <ion-label>{{'CITY' | translate}}:</ion-label>
+            <div *ngFor="let city of cities">{{city.name}}</div>
+            <ion-select [(ngModel)]="citySelected" placeholder="{{'Select a city' | translate}}" okText="{{'OK' | translate}}" cancelText="{{'Cancel' | translate}}" multiple="true">
+                <ion-option [value]="city" *ngFor="let city of cities">{{city.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <button class="next-btn" ion-button type="submit" [disabled]="!citySelected" (click)="goToNextPage()">{{'NEXT' | translate}}</button>
+    </ion-list>
+</ion-content>

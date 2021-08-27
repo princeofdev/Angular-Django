@@ -1,0 +1,31 @@
+services:
+  - postgres:9
+
+stages:
+  - test
+  - deploy
+
+test:
+  variables:
+    DJANGO_SETTINGS_MODULE: wuappa.settings_test
+    POSTGRES_DB: postgres
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    POSTGRES_HOST: postgres
+  image: python:3.5
+  stage: test
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - python manage.py test
+
+deploy to staging:
+  image: kasfactory/gitlab-ci-git-push
+  stage: deploy
+  only:
+    - develop
+  environment:
+    name: staging
+    url: http://wuappa.kasfactory.net
+  script: 
+    - git-push staging@staging.kasfactory.net:~/wuappa/backend_repo master

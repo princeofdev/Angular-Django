@@ -1,0 +1,37 @@
+<ion-content padding>
+  <ion-row class="logo-box">
+      <img src="assets/imgs/wuappa-logo.png" alt="Wuappa Logo">
+  </ion-row>
+  <div class="border-box">
+    <div class="inside-box">
+      <div class="box" *ngIf="itemActive == 'all'">
+        <ion-row>
+          <ion-col col-md-12>
+            <h2>{{'DAZZLE YOUR HAIR' | translate }} <br> {{'WITH WUAPPA!' | translate}}</h2>
+            <p>{{'Top rated hairstylists and makeup artists come directly to you' | translate}}</p>
+          </ion-col>
+        </ion-row>
+        <div class="buttons">
+          <ion-row>
+            <ion-col>
+              <button (click)="setLogin()" (ng-submit)="login($event)">{{ 'SIGNIN' | translate }}</button>
+              <button (click)="setRegister()">{{ 'REGISTER' | translate }}</button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div *ngIf="itemActive == 'register'">
+        <div class="buttons" text-center>
+          <div class="type" text-center>
+            <h4>{{'SELECT-TYPE' | translate}}</h4>
+              <button ion-button (click)="goToSignUp('FIN')">{{'CLIENT' | translate}}</button>
+              <button ion-button (click)="goToSignUp('PRO')">{{'PROFESSIONAL' | translate}}</button>
+          </div>
+          <div text-center>
+              <button type="button" style="background-color: grey;" (click)="goToPrev()">{{'BACK' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

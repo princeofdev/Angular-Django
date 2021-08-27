@@ -1,0 +1,57 @@
+<ion-header>
+    <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row *ngIf="services.length != 0">
+                <ion-col col-md-12 class="services-container">
+                    <ion-row>
+                        <ion-col>
+                            <h5 class="title-text">{{'Select the services you perform' | translate}}:</h5>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 *ngFor="let service of services" text-center>
+                            <button class="service-button" (click)="switchService(service)" [ngClass]="serviceStyle(service)">
+                                {{ service.name }}
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <button class="save-button" [disabled]="selectedServices.length == 0" (click)="register()">{{'CONTINUE' | translate}}</button>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+        </ion-row>
+        <ion-row *ngIf="workZoneServices.length != 0">
+            <ion-col col-md-12 class="services-container">
+                <ion-row>
+                    <ion-col>
+                        <h5 class="title-text">{{'Your services' | translate}}:</h5>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 *ngFor="let service of workZoneServices" text-center>
+                        <button class="service-button" (click)="switchService(service)" [ngClass]="serviceStyle(service)">
+                            {{ service.name }}
+                        </button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <small>
+                            {{'helptext' | translate}}
+                        </small>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <button class="save-button" [disabled]="selectedServices.length == 0" (click)="updateProfessionalServices()">{{'Send request' | translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+<navbar [title]="title" [registerMode]="registerMode" ></navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row >
+        <ion-col col-12 text-center>
+            <p class="text-week">{{'Week days' | translate}}</p>
+        </ion-col>
+        <ion-col col-12 text-center>
+            <button class="day-button" *ngFor="let day of days"  (click)="switchDay(day.key)" [ngClass]="dayStyle(day.key)">
+                    {{day.value}}
+            </button>
+        </ion-col>
+        <ion-col col-6 text-center>
+            <p class="text">{{'Mornings' | translate}}</p>
+        </ion-col>
+        <ion-col col-6 text-center>
+            <p class="text">{{'Afternoons' | translate}} </p>
+        </ion-col>
+        <ion-col col-6 text-center>
+        <button class="hour-button"  (click)="switchHour(morning.key)" [ngClass]="hourStyle(morning.key)" *ngFor="let morning of mornings">
+                {{morning.value}}
+        </button>
+        </ion-col>
+        <ion-col col-6 class="last-child" text-center>
+            <button class="hour-button"  (click)="switchHour(afternoon.key)" [ngClass]="hourStyle(afternoon.key)" *ngFor="let afternoon of afternoons">
+                    {{afternoon.value}}
+            </button>
+        </ion-col>
+    </ion-row>
+    <ion-row >
+        <button class="save-button" [disabled]="selectedHours.length == 0 || selectedDays.length == 0" (click)="save()">{{'SAVE' | translate}}</button>
+    </ion-row>
+</ion-content>

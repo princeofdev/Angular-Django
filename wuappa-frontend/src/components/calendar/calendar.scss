@@ -1,0 +1,40 @@
+calendar {
+
+
+    ion-calendar-month .primary .days .on-selected, 
+    ion-calendar-month .primary .startSelection button.days-btn, 
+    ion-calendar-month .primary .endSelection button.days-btn{
+        background-color: #E46D7A;
+    }
+    ion-calendar .title .switch-btn{
+        color: #E46D7A ;
+    }
+    ion-calendar .title .switch-btn .arrow-dropdown{
+        display: none;
+    }
+    ion-calendar .title{
+        // padding: 0 120px 0 120px;
+    }
+    .week-title li{
+        color: #484B4B;
+    }
+    .today p{
+        color: #E46D7A;
+    }
+    .calendar{
+        width: 100%;
+        margin-top: 5%;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.18);
+        padding-top: 5% 0;        
+        .title-calendar{
+            color: #484B4B;
+            font-family: "Lucida Grande";
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+   
+}

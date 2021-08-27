@@ -1,0 +1,35 @@
+navbar {
+    ion-navbar{
+        position: relative;
+        .fa {
+            font-size:1.5em;
+            color: black;
+        }
+        height: 50px;
+        img { margin-top: 5px; width: 40px; }
+        h1, h2, h3, h4, h5, h6 { margin-top: 8px; }
+        .button-ios {
+            background-color: transparent !important;
+        }
+    }
+    ion-title{
+      font-size: 20px !important;
+      font-family: "Playfair Display" !important;
+      font-weight: 400 !important;
+      color: #363939 !important;
+      width: 100%;
+  }
+    .toolbar-content{
+        position: absolute;
+        width: 100%;
+    }
+
+    .back-button{
+        z-index: 10;
+    }
+
+    .title h5 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

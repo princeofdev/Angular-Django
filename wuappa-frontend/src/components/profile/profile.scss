@@ -1,0 +1,10 @@
+profile {
+  div { font-size: 15px; margin: 10px 0 0 5px; }
+  ion-thumbnail {
+    overflow: hidden;
+    max-height: 70px;
+    img {
+      width: 100%;
+    }
+  }
+}

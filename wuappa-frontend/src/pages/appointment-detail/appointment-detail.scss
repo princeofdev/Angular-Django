@@ -1,0 +1,261 @@
+page-appointment-detail {
+    ion-row{
+        width: 100%;
+    }
+    ion-content{
+        font-family: "Lucida Grande";
+    }
+    .text-pending{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 15px;
+    }
+    .text-cancel{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 15px;
+        text-align: left;
+        margin-top: 7%;
+        text-decoration: underline;
+    }
+    .cancel-text{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 15px;
+        text-align: center; 
+    }
+    .text-amount{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 15%;
+        text-decoration: underline;
+    }
+    .total-amount{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 15%;
+    }
+    ul{
+        li{
+            margin-bottom: 5%;
+        }
+        text-align: left;
+        padding-left: 0;
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        margin-top: 0;
+        list-style-type: none;
+    }
+    .title{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 18px;
+    }
+    ion-label{
+        font-family: "Lucida Grande";
+        color: #484B4B;
+        font-size: 18px;
+        white-space: normal;
+       p{
+            font-family: "Lucida Grande";
+            color: #484B4B;
+            font-size: 16px;
+            margin-bottom: 12px;
+       }
+    }
+    ion-icon.clock{
+        padding: .35em;
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #9B9B9B;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        font-size: 3em;
+    }
+    ion-icon.heart{
+        padding: .4em;
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #F1C40F;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        font-size: 3em;
+    }
+    ion-icon.checkmark{
+        padding: .25em;
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #2ECC71;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        font-size: 3em;
+    }
+    ion-icon.close{
+        padding: .25em;
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #E74C3C;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        font-size: 3em;
+    }
+    .punctuation-stars{
+        text-align: center;
+        width: 50%;
+        display: inline-table;
+        margin-left: 8%;
+    }
+    .out-time{
+        background-color: #E74C3C !important;
+    }
+    .out-time-text{
+        color: #E74C3C;
+    }
+    .content-center{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    ion-select{
+        font-family: 'Lucida Grande';
+        font-size: 16px;
+        text-align: left;
+        color: #4e4e4e;
+        border-radius: 32px;
+        padding-right: 30px !important;
+        border: solid 1px #ECEDED;
+        width: 80%;
+        min-width: 80%;
+    }
+    .button-confirm{
+        display: block;
+        width: 100%;
+        font-family: 'Lucida Grande';
+        font-size: 16px;
+        background: #484B4B;
+        padding: .6em;
+        color: white;
+        margin: 2%;
+        margin-top: 8%;
+        border-radius: 20px;
+    }
+    .button-cancel{
+        display: block;
+        width: 100%;
+        font-family: 'Lucida Grande';
+        font-size: 16px;
+        padding: .6em;
+        color: white;
+        background: #E74C3C;
+        margin: 2%;
+        border-radius: 20px;
+    }
+    .button-send{
+        display: block;
+        width: 100%;
+        font-family: 'Lucida Grande';
+        font-size: 16px;
+        padding: .6em;
+        color: white;
+        background: #E46D7A;
+        margin: 2%;
+        border-radius: 20px;
+    }
+
+    .cancel-button{
+        width: 100%;
+        height: 44px;
+        color: white;
+        font-family: "Playfair Display";
+        font-size: 16px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 25px;
+        background-color: #E74C3C;
+    }
+    .accept-button{
+        width: 100%;
+        height: 44px;
+        color: white;
+        font-family: "Playfair Display";
+        font-size: 16px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 25px;
+        background-color: #2ECC71;
+        margin-bottom: 10px;
+    }
+    .notify-button{
+
+        width: 100%;
+        height: 44px;
+        color: white;
+        font-family: "Playfair Display";
+        font-size: 16px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 25px;
+        background-color: #E46D7A;
+        margin-bottom: 10px;
+    }
+
+
+        .add-payment{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: .7em;
+            display: block;
+            padding: 5%;
+            width: 100%;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid #D8D8D8;
+            ion-icon{
+                font-size: 1.5em;
+                margin-right: 5%;
+                font-weight: bold;
+            }
+            div{
+                font-family: "Lucida Grande";
+                color: #484B4B;
+                font-size: .7em;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                font-size: 14px;
+                display: inline-flex;
+            }
+        }
+
+        .card-name { }
+    .card-data, .card-expires { display: block; margin-left: 30px; margin-bottom: 3px; }
+    .change-payment {
+      float: right;
+      padding: 5px;
+    }
+
+    ion-textarea{
+        border: 1px solid #DBDBDC;
+        border-radius: 8px;
+    }
+
+    .avatar-box{
+        width: 100%;
+        .professional-avatar{
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+        }
+    }
+
+}

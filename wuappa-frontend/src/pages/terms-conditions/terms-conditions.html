@@ -1,0 +1,13 @@
+<ion-header>
+  <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+<ion-content padding class="terms-conditions-container">
+<ion-row >
+  <h6>{{'TERMS-CONDITIONS' | translate}}:</h6>
+  <terms></terms>
+</ion-row>
+<ion-row class="accept-terms-box">
+  <button ion-button class="refuse-button" (click)="refuseTerms()">{{'REFUSE' | translate}}</button>
+  <button ion-button class="add-style-button" (click)="acceptTerms()">{{'ACCEPT' | translate}}</button>
+</ion-row>
+</ion-content>

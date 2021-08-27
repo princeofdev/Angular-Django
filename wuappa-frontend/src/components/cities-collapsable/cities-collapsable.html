@@ -1,0 +1,30 @@
+
+<div *ngFor="let city of citySelected; let i = index" (click)="setItemActive(city.id, i)">
+    <div class="collapsable">
+        <span item-left class="city">{{city.name}}</span>
+        <div item-right class="arrow-collapsable" *ngIf="!displayCorrectArrow(i)">
+            <ion-icon name="ios-arrow-down"></ion-icon>
+        </div> 
+        <div item-right class="arrow-collapsable" *ngIf="displayCorrectArrow(i)">
+            <ion-icon name="ios-arrow-up"></ion-icon>
+        </div>
+    </div>
+    <div *ngFor="let zone of zoneList">
+        <div *ngIf="showZonesByCity(zone.city, i)">
+            <ion-item class="text-zone">
+                <div item-left>
+                    {{zone.name}}
+                </div>
+                <div item-right (click)="addZone(zone.id)" [hidden]="zoneIsSelected(zone.id)">
+                    <ion-icon name="ios-add-circle-outline"></ion-icon>
+                    {{'Add' | translate}}
+                </div>
+                <div item-right (click)="deleteZone(zone.id)" [hidden]="!zoneIsSelected(zone.id)">
+                    <ion-icon name="ios-trash-outline"></ion-icon>
+                    {{'Delete' | translate}}
+                </div>
+            </ion-item>
+        </div>
+    </div>
+    <hr>
+</div>

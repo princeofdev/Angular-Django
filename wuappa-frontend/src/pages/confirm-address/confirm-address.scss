@@ -1,0 +1,61 @@
+page-confirm-address {
+
+    form{
+        width: 100%;
+    }
+
+    ion-item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+         & .item-inner{
+            border-bottom: 0px !important;
+        }
+
+        & ion-label{
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Open Sans';
+        }
+
+        & ion-input{
+            margin-top: 20px;
+            font-size: 16px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-weight: 300;
+            color: #363939 !important;
+            width: 100%;
+            border: 1px solid #ECEDED;
+            border-radius: 8px;
+            .text-input,
+            .text-input-md{
+                margin-left: 5px !important;
+            }
+            
+        }
+    }
+
+    #confirm-button{
+    margin-top: 10px;
+    width: 100%;
+    height: 52px;
+    background-color: #E46D7A;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.label-error{
+    border: 1px solid red;
+}
+
+ion-item.item-ios.ng-dirty.ng-invalid{
+    border-bottom: 0px !important;
+}
+
+}

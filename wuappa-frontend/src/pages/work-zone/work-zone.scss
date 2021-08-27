@@ -1,0 +1,50 @@
+page-work-zone{
+
+    ion-header{
+        text-align: center;
+    }
+    .item-inner{
+        border-bottom: 0 !important;
+    }
+    ion-list{
+        padding-left: 10%;
+        padding-right: 10%;
+        & ion-item:first-child{
+            border-top: 0px !important;
+        }
+    }
+    ion-label{
+        text-align: center;
+    }
+    .select-icon{
+        padding-right: 5%;
+    }
+    .next-btn{
+        width: 100%;
+        height: 52px;
+        background-color: #89898A;
+        text-align: center;
+        margin-top: 10%;
+        font-family: "Lucida Grande";
+        font-size: 16px;
+        border-radius: 8px;
+        text-transform: capitalize;
+    }
+    ion-select{
+        font-family: 'Lucida Grande';
+        font-size: 16px;
+        text-align: left;
+        color: #484B4B;
+        border-radius: 32px;
+        border: solid 1px #ECEDED;
+        width:100%;
+        padding: 0;
+        min-width: 100%;
+        text-align: center;
+
+        .select-icon{
+            padding-right: 20px !important;
+        }
+    }
+    
+}

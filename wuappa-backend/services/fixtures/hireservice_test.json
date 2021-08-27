@@ -1,0 +1,286 @@
+[
+  {
+    "fields": {
+      "date_joined": "2017-11-07T09:37:33Z",
+      "email": "profesiona@kasfactory.net",
+      "first_name": "Aurora",
+      "groups": [],
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "last_login": "2017-11-13T10:49:07.039Z",
+      "last_name": "Barrios",
+      "password": "pbkdf2_sha256$36000$rQ113lA6X0Iy$DE/xUI3dMwGdfvlZRDRUu5FjjWHYhNi5eGKj7gQUEm0=",
+      "user_permissions": [],
+      "username": "profesional"
+    },
+    "model": "auth.user",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "date_joined": "2017-11-07T09:37:33Z",
+      "email": "basico@kasfactory.net",
+      "first_name": "Nombre",
+      "groups": [],
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "last_login": "2017-11-13T10:49:07.039Z",
+      "last_name": "Apellidos",
+      "password": "pbkdf2_sha256$36000$rQ113lA6X0Iy$DE/xUI3dMwGdfvlZRDRUu5FjjWHYhNi5eGKj7gQUEm0=",
+      "user_permissions": [],
+      "username": "basico"
+    },
+    "model": "auth.user",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "date_joined": "2017-11-07T09:37:33Z",
+      "email": "profesional2@kasfactory.net",
+      "first_name": "Aurora",
+      "groups": [],
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "last_login": "2017-11-13T10:49:07.039Z",
+      "last_name": "Barrios",
+      "password": "pbkdf2_sha256$36000$rQ113lA6X0Iy$DE/xUI3dMwGdfvlZRDRUu5FjjWHYhNi5eGKj7gQUEm0=",
+      "user_permissions": [],
+      "username": "profesional2"
+    },
+    "model": "auth.user",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "email": "profesiona@kasfactory.net",
+      "primary": true,
+      "user": 3,
+      "verified": true
+    },
+    "model": "account.emailaddress",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "email": "basico@kasfactory.net",
+      "primary": true,
+      "user": 4,
+      "verified": true
+    },
+    "model": "account.emailaddress",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "email": "profesional2@kasfactory.net",
+      "primary": true,
+      "user": 5,
+      "verified": true
+    },
+    "model": "account.emailaddress",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "documents": "[]",
+      "iban_bank_account": "ES5221003179712200170953",
+      "phone": "+34661661661",
+      "picture": null,
+      "swift_bank_account": null,
+      "type": "PRO",
+      "user": 3
+    },
+    "model": "profiles.profile",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "documents": "[]",
+      "iban_bank_account": "ES5221003179712200170953",
+      "phone": "+34661661661",
+      "picture": null,
+      "swift_bank_account": null,
+      "type": "FIN",
+      "user": 4
+    },
+    "model": "profiles.profile",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "documents": "[]",
+      "iban_bank_account": "ES5221003179712200170953",
+      "phone": "+34661661661",
+      "picture": null,
+      "swift_bank_account": null,
+      "type": "PRO",
+      "user": 5
+    },
+    "model": "profiles.profile",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "user": 3,
+      "work_zone": 1
+    },
+    "model": "profiles.userworkzone",
+    "pk": 3
+  },
+  {
+    "model": "services.hireservice",
+    "pk": 1,
+    "fields": {
+      "client": 4,
+      "professional": null,
+      "date": "2028-10-10",
+      "time": "18:00:00",
+      "address": "Calle Prueba 20",
+      "city": "Madrid",
+      "region": "Madrid",
+      "zip_code": "28039",
+      "country": "Spain",
+      "comments": "Hola",
+      "status": "PEN",
+      "modified_at": "2017-11-28 10:12:54",
+      "notified_at": null
+    }
+  },
+  {
+    "model": "services.hireservice",
+    "pk": 2,
+    "fields": {
+      "client": 4,
+      "professional": 3,
+      "date": "2016-10-10",
+      "time": "12:00:00",
+      "address": "Calle Prueba 20",
+      "city": "Madrid",
+      "region": "Madrid",
+      "zip_code": "28039",
+      "country": "Spain",
+      "comments": "Hola",
+      "status": "ACP",
+      "total": 10.0,
+      "total_currency": "EUR",
+      "modified_at": "2017-11-28 10:12:54",
+      "notified_at": null
+    }
+  },
+  {
+    "model": "services.hireservice",
+    "pk": 3,
+    "fields": {
+      "client": 2,
+      "professional": 1,
+      "date": "2028-10-10",
+      "time": "12:00:00",
+      "address": "Calle Prueba2 20",
+      "city": "Madrid",
+      "region": "Madrid",
+      "zip_code": "28029",
+      "country": "Spain",
+      "comments": "Hola",
+      "status": "ACP",
+      "modified_at": "2017-11-28 10:12:54",
+      "notified_at": null
+    }
+  },
+  {
+    "model": "services.hireservice",
+    "pk": 4,
+    "fields": {
+      "client": 4,
+      "professional": 3,
+      "date": "2028-11-28",
+      "time": "10:12:54",
+      "address": "Calle Prueba",
+      "city": "Madrid",
+      "region": "Madrid",
+      "zip_code": "28029",
+      "country": "Espa\u00f1a",
+      "comments": "",
+      "status": "PEN",
+      "modified_at": "2017-11-28 10:12:54",
+      "notified_at": null
+    }
+  },
+  {
+    "model": "services.hireservice",
+    "pk": 5,
+    "fields": {
+      "client": 2,
+      "professional": 5,
+      "date": "2028-11-28",
+      "time": "10:12:54",
+      "address": "Calle Prueba",
+      "city": "Madrid",
+      "region": "Madrid",
+      "zip_code": "28029",
+      "country": "Espa\u00f1a",
+      "comments": "",
+      "status": "CMP",
+      "modified_at": "2017-11-28 10:12:54",
+      "notified_at": null
+    }
+  },
+  {
+    "fields": {
+      "user": 3,
+      "service": 1
+    },
+    "model": "services.userservice",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "user": 3,
+      "service": 3
+    },
+    "model": "services.userservice",
+    "pk": 5
+  },
+  {
+    "model": "services.hireserviceservice",
+    "pk": 1,
+    "fields": {
+      "hireservice": 1,
+      "service": 1
+    }
+  },
+  {
+    "model": "services.hireserviceservice",
+    "pk": 2,
+    "fields": {
+      "hireservice": 1,
+      "service": 3
+    }
+  },
+  {
+    "model": "services.hireserviceservice",
+    "pk": 3,
+    "fields": {
+      "hireservice": 2,
+      "service": 1
+    }
+  },
+  {
+    "model": "services.hireserviceservice",
+    "pk": 4,
+    "fields": {
+      "hireservice": 4,
+      "service": 1
+    }
+  },
+  {
+    "model": "services.hireserviceservice",
+    "pk": 5,
+    "fields": {
+      "hireservice": 5,
+      "service": 1
+    }
+  }
+]

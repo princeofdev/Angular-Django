@@ -1,0 +1,48 @@
+<ion-header>
+    <navbar [title]="title" [registerMode]="true"></navbar>
+</ion-header>
+<ion-content padding>
+    <form [formGroup]="addCardForm" (submit)="saveCard()">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>{{ 'SIGNUP-NAME' | translate }}</ion-label>
+            <ion-input formControlName="name" required></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>{{ 'CARDNUMBER' | translate }}</ion-label>
+            <ion-input formControlName="cardnumber" type="tel" required></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>{{ 'EXPIRATION' | translate }}</ion-label>
+            <ion-datetime displayFormat="MM/YYYY" pickerFormat="MM/YYYY" formControlName="expiration" [min]="minDate" [max]="maxDate"></ion-datetime>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>{{ 'CVC' | translate }}</ion-label>
+            <ion-input formControlName="cvc" type="tel" required></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p [hidden]="!isUIIdeal()">{{ "NOCHARGE" | translate }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="error"[hidden]="!isUIError()">{{ "CARDERROR" | translate }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button class="save-button" type="submit" ion-button [disabled]="addCardForm.invalid">{{'SAVE' | translate}}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+</ion-content>

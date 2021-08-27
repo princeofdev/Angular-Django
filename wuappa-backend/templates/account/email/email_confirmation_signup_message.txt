@@ -1,0 +1,16 @@
+{% load account %}
+{% user_display user as user_display %}
+{% load i18n %}
+
+Welcome to WUAPPA {{ user.first_name }}.
+
+Your account is almost ready.
+We just need to verify your email address in order to complete your signup.
+
+Verify your e-mail address visiting: {{ activate_url }}
+
+If you have not created an account with WUAPPA, please ignore this email.
+
+Thanks!
+
+The WUAPPA team.

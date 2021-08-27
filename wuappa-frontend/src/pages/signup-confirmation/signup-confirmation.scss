@@ -1,0 +1,39 @@
+page-signup-confirmation {
+    ion-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    i.fa-smile-o{
+        font-size: 40px !important;
+        color: #2ECC71;
+    }
+    i.fa-frown-o{
+        font-size: 40px !important;
+        color: #E74C3C;
+    }
+    h6{
+        text-align: center;
+        font-family: 'Open Sans';
+        color: #363939;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    #login-btn{
+        width: 100%;
+        background-color: #E46D7A !important;
+        border-radius: 8px;
+    }
+
+    #details-btn{
+        width: 100%;
+        height: 52px;
+        background-color: #89898A;
+        text-align: center;
+        font-family: "Open Sans";
+        font-size: 16px;
+        border-radius: 8px;
+    }
+}

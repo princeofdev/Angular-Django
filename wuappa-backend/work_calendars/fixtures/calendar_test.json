@@ -1,0 +1,74 @@
+[
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 1,
+    "fields": {
+      "professional": 1,
+      "date": "2017-11-30"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 2,
+    "fields": {
+      "professional": 1,
+      "date": "2017-11-29"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 3,
+    "fields": {
+      "professional": 1,
+      "date": "2017-12-03"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 4,
+    "fields": {
+      "professional": 1,
+      "date": "2017-12-04"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 5,
+    "fields": {
+      "professional": 3,
+      "date": "2017-12-03"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 6,
+    "fields": {
+      "professional": 3,
+      "date": "2017-12-04"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 7,
+    "fields": {
+      "professional": 1,
+      "date": "2017-12-05"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 8,
+    "fields": {
+      "professional": 1,
+      "date": "2017-12-06"
+    }
+  },
+  {
+    "model": "work_calendars.dayoff",
+    "pk": 9,
+    "fields": {
+      "professional": 1,
+      "date": "2017-12-07"
+    }
+  }
+]

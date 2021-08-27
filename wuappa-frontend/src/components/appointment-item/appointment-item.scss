@@ -1,0 +1,20 @@
+appointment-item {
+  h2 {
+    text-overflow: ellipsis;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  [item-right] {
+    top: 0px;
+    right: 0px;
+    text-align: right;
+    position: absolute;
+    ion-icon, .hour-confirmed {
+      right: 0px;
+      //position: absolute;
+      display: block;
+      margin: 5px 0 55px 0;
+    }
+  }
+}

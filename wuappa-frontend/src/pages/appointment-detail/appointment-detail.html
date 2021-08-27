@@ -1,0 +1,228 @@
+<ion-header>
+    <navbar [title]="title" [registerMode]="true"></navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row text-center *ngIf="isUILoading()">
+        <ion-col col-12>
+            <ion-spinner></ion-spinner>
+        </ion-col>
+    </ion-row>
+    <ion-row class="full-width" *ngIf="isUIIdeal()">
+        <ion-row *ngIf="activeItem == 'PEN'">
+            <ion-col col-12 text-center>
+                <h6 class="title">{{'ORDERSTATUS' | translate}}</h6>
+                <ion-col col-12 text-center>
+                    <ion-icon class="clock" name="ios-clock-outline"></ion-icon>
+                </ion-col>
+                <p class="text-pending" *ngIf="userType === 'FIN'">{{'PENDINGCONFIRMATIONFROMPROFFESIONAL' | translate}}</p>
+            </ion-col>
+            <ion-col col-12>
+                <ion-label>
+                    <strong>{{'ADDRESS' | translate}}</strong>
+                    <p>{{fullAddress}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'SERVICES' | translate}}</strong>
+                    <p><appointment-services [services]="item.services"></appointment-services></p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'DATE' | translate}}</strong>
+                    <p>{{formattedDate}}</p>
+                </ion-label>
+                <ion-label *ngIf="userType === 'PRO' && item.comments">
+                    <strong>{{'comment' | translate}}</strong>
+                    <p> {{item.comments}} </p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'TOTAL-PRICE' | translate}}</strong>
+                    <p>{{price}}</p>
+                </ion-label>
+            </ion-col>
+            <ion-col col-12 *ngIf="userType === 'FIN'">
+                <button  class="cancel-button" (click)="showCancelAlert()">{{'Cancel' | translate}}</button>
+            </ion-col>
+            <ion-col col-12 *ngIf="userType === 'PRO'">
+                <button  class="accept-button" (click)="acceptService()">{{'Accept service' | translate}}</button>
+                <button  class="cancel-button" (click)="refuseService()">{{'Refuse service' | translate}}</button>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="activeItem == 'CAN' || activeItem == 'REJ'">
+            <ion-col col-12 text-center>
+                <h6 class="title">{{'ORDERSTATUS' | translate}}</h6>
+                <ion-col col-12 text-center>
+                    <ion-icon class="clock out-time" name="ios-clock-outline"></ion-icon>
+                </ion-col>
+                <p class="text-pending out-time-text">{{'Canceled' | translate}}</p>
+            </ion-col>
+            <ion-col col-12>
+                <ion-label *ngIf="userType === 'PRO'">
+                    <strong>{{'CLIENT' | translate}}</strong>
+                    <profile [user]="item.client"></profile>
+                </ion-label>
+                <ion-label *ngIf="userType === 'FIN'">
+                    <strong>{{'Stylist' | translate}}</strong>
+                    <profile [user]="item.professional"></profile>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'ADDRESS' | translate}}</strong>
+                    <p>{{fullAddress}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'SERVICES' | translate}}</strong>
+                    <p><appointment-services [services]="item.services"></appointment-services></p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'DATE' | translate}}</strong>
+                    <p>{{formattedDate}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'TOTAL-PRICE' | translate}}</strong>
+                    <p>{{price}}</p>
+                </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="activeItem == 'ACP'">
+            <ion-col col-12 text-center>
+                <h6 class="title">{{'ORDERSTATUS' | translate}}</h6>
+                <ion-col col-12 text-center>
+                    <ion-icon class="heart" name="heart"></ion-icon>
+                </ion-col>
+                <p class="text-pending ">{{'INPROCESS' | translate}}</p>
+            </ion-col>
+            <ion-col col-12>
+                <ion-label *ngIf="userType === 'PRO'">
+                    <strong>{{'CLIENT' | translate}}</strong>
+                    <profile [user]="item.client"></profile>
+                </ion-label>
+                <ion-label *ngIf="userType === 'FIN'">
+                    <strong>{{'Stylist' | translate}}</strong>
+                    <profile [user]="item.professional"></profile>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'ADDRESS' | translate}}</strong>
+                    <p>{{fullAddress}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'SERVICES' | translate}}</strong>
+                    <p><appointment-services [services]="item.services"></appointment-services></p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'DATE' | translate}}</strong>
+                    <p>{{formattedDate}}</p>
+                </ion-label>
+                <ion-label *ngIf="userType === 'PRO' && item.comments">
+                    <strong>{{'comment' | translate}}</strong>
+                    <p> {{item.comments}} </p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'TOTAL-PRICE' | translate}}</strong>
+                    <p>{{price}}</p>
+                </ion-label>
+                <ion-label *ngIf="userType === 'FIN'">
+                    <strong>{{'PAYMENTMETHOD' | translate}}</strong>
+                    <p>
+                        {{ item.credit_card.brand }} 
+                        {{ 'finished' | translate }}
+                        {{ item.credit_card.last4 }}
+                    </p>
+                    <button *ngIf="!card" (click)="goToPaymentsPage()" class="add-payment">
+                        <div>{{ 'CHANGEMETHOD' | translate }}</div>
+                    </button>
+                    <p *ngIf="card">
+                        <button (click)="goToPaymentsPage()" class="change-payment">
+                            {{'change' | translate}}
+                        </button>
+                        <ion-icon name="ios-card"></ion-icon>
+                        <span class="card-name">{{ card.name }}</span>
+                        <span class="card-data">{{card.brand}} {{'finishedin' | translate}} {{card.last4}}</span>
+                        <span class="card-expires">{{'Expires' | translate}}: {{card.exp_month}}/{{card.exp_year}}</span>
+                    </p>
+                </ion-label>
+            </ion-col>
+                <button *ngIf="userType == 'PRO'" class="notify-button" (click)="notifyCustomer()">{{"Notify you're coming" | translate}}</button>
+                <button *ngIf="userType == 'PRO' && checkDateTime()" class="accept-button" (click)="finishService()">{{'FINISH' | translate}}</button>
+                <button class="cancel-button" (click)="checkCancelability()">{{'Cancel' | translate}}</button>
+        </ion-row>
+        <ion-row *ngIf="activeItem == 'CMP'">
+            <ion-col col-12 text-center *ngIf="hasReview || userType === 'PRO'" >
+                <!-- <h6 class="title">{{'ORDERSTATUS' | translate}}</h6> -->
+                <ion-col col-12 text-center>
+                    <ion-icon class="checkmark" name="checkmark"></ion-icon>
+                </ion-col>
+                <p class="text-pending ">{{'COMPLETED' | translate}}</p>
+                <punctuation-stars *ngIf="item.rating" [read]='true' [value]="item.rating"></punctuation-stars>
+            </ion-col>
+
+            <ion-row *ngIf="!hasReview && userType === 'FIN'">
+                <ion-col col-12 text-center>
+                    <ion-row>
+                        <ion-col col-12 text-center>
+                            <ion-icon class="checkmark" name="checkmark"></ion-icon>
+                        </ion-col>
+                        <ion-col col-12 text-center>
+                            <h6 class="title" text-center>{{'Service completed' | translate}}</h6>
+                        </ion-col>
+                        <ion-col col-12 text-center>
+                            <h6 class="title" text-center>{{'Leave us a review' | translate}}</h6>
+                        </ion-col>
+                        <ion-col col-12 class="avatar-box" text-center>
+                            <img class="professional-avatar" [src]="professional_avatar" *ngIf="professional_avatar" />
+                        </ion-col>
+                    </ion-row>
+                    <p class="text-pending ">{{'Rate the stylist' | translate}}</p>
+                    <punctuation-stars [read]='false' [value]='rating' (clicked)="updateRatingStars($event)"></punctuation-stars>
+                    <p class="text-pending">{{'Leave a comment' | translate}}</p>
+                    <ion-textarea placeholder="{{'Leave a comment' | translate}}" rows="5" [(ngModel)]="review_comment">
+                    </ion-textarea>
+                </ion-col>
+                <ion-col col-12>
+                    <button class="button-send" (click)="sendReview()"> {{'Send' | translate}}</button>
+                </ion-col>
+            </ion-row>
+
+            <ion-col col-12 *ngIf="hasReview || userType === 'PRO'">
+                <ion-label *ngIf="userType === 'PRO'">
+                    <strong>{{'CLIENT' | translate}}</strong>
+                    <p>{{item.client.first_name}} {{item.client.last_name}}</p>
+                </ion-label>
+                <ion-label *ngIf="userType === 'FIN'">
+                    <strong>{{'Stylist' | translate}}</strong>
+                    <p>{{item.professional.first_name}} {{item.professional.last_name}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'ADDRESS' | translate}}</strong>
+                    <p>{{fullAddress}}</p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'SERVICES' | translate}}</strong>
+                    <p><appointment-services [services]="item.services"></appointment-services></p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'DATE' | translate}}</strong>
+                    <p>{{formattedDate}}</p>
+                </ion-label>
+                <ion-label *ngIf="userType === 'PRO' && item.comments">
+                    <strong>{{'comment' | translate}}</strong>
+                    <p> {{item.comments}} </p>
+                </ion-label>
+                <ion-label>
+                    <strong>{{'TOTAL-PRICE' | translate}}</strong>
+                    <p>{{price}}</p>
+                </ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+
+    <ion-row class="full-width" *ngIf="isUIBlank()">
+        <ion-col col-md-12>
+        </ion-col>
+    </ion-row>
+    <ion-row class="full-width" *ngIf="isUIError()">
+        <ion-col col-md-12>
+            <div class="text-error">
+                {{'UPSERROR' | translate}}
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-content>

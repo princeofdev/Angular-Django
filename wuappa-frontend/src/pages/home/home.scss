@@ -1,0 +1,61 @@
+page-home {
+    ion-navbar{
+        .fa{
+            font-size:1.5em;
+            color: black;
+        }
+    }
+    ion-content{
+
+    }
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+
+        .category-image{
+            margin-bottom: 0px;
+            width: 29em;
+        }
+    }
+    .centered {
+        position: absolute;
+        font-size: 42px;
+        font-family: "Playfair Display";
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .no-categories{
+        display: flex;
+        justify-content: center;
+        h5{
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 16px;
+        }
+    }
+    p {
+        position: absolute;
+        z-index: 3;
+        right: 18px;
+        top: calc(50% - 20px);
+        color: white;
+        font-size: 31px;
+        font-family: "Playfair Display";
+        margin: 0px;
+    }
+
+    .coming-soon-text{
+        margin-top: 35px;
+    }
+
+    .ion-item{
+        color: black;
+    }
+
+    .col { margin: 0 !important; padding: 0 !important; }
+
+
+}

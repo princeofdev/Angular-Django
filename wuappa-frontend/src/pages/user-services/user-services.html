@@ -1,0 +1,19 @@
+
+<ion-header>
+  <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isUIIdeal()">
+    <h5 text-center>{{'Select a service' | translate}}</h5>
+    <ion-slides pager="true" (ionSlideDidChange)="slideChanged()">
+      <ion-slide *ngFor="let service of servicesList" >
+        <service-card [service]='service'></service-card>
+      </ion-slide>
+    </ion-slides>
+    <button class="add-style-button" (click)="goToBasket()" >{{'I want this style' | translate}}</button>
+  </div>
+  <div *ngIf="isUIBlank()">
+    <h5 text-center>{{'There are no services in category' | translate }}</h5>
+  </div>
+</ion-content>

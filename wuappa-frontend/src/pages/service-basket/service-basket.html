@@ -1,0 +1,26 @@
+<ion-header>
+    <navbar [title]="title" [registerMode]="registerMode" ></navbar>
+</ion-header>
+<ion-content padding>
+  <div class="basket-container"  *ngIf="isUIIdeal()">
+    <div>
+      <div class="item-list">
+        <div class="itemBox" *ngFor="let item of basketList">
+          <basket-item (increment)="incrementService($event)" (decrement)="decrementService($event)" [item]='item' ></basket-item>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button class="add-style-button" (click)="addOtherServices()">{{'Add other services' | translate}}</button>
+      <button class="add-style-button" (click)="goToUserCalendar()">Continue</button>
+    </div>
+  </div>
+  <div class="basket-container" *ngIf="isUIBlank()">
+    <div>
+      <h6>{{'Your basket is empty' | translate}}</h6>
+    </div>
+    <div>
+      <button class="add-style-button" (click)="addOtherServices()">{{'Add your first service' | translate}}</button>
+    </div>
+  </div>
+</ion-content>

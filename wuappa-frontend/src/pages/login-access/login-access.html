@@ -1,0 +1,33 @@
+<ion-content padding>
+  <ion-row class="logo-box">
+      <img src="assets/imgs/wuappa-logo.png" alt="Wuappa Logo">
+  </ion-row>
+  <div class="border-box">
+    <div class="inside-box">
+      <form [formGroup]="form" (ngSubmit)="login($event)" text-center>
+        <ion-list class="box-item">
+          <ion-item class="ionitem">
+            <ion-label>
+              <img src="assets/imgs/login-user-icon.png" alt="">
+            </ion-label>
+            <ion-input type="email" formControlName="email" placeholder="{{'LOGIN-EMAIL' | translate}}" required></ion-input>
+          </ion-item>
+          <ion-item class="ionitem">
+            <ion-label>
+              <img src="assets/imgs/login-password-icon.png" alt="">
+            </ion-label>
+            <ion-input type="password" formControlName="password" placeholder="{{'LOGIN-PASSWORD' | translate}}" required></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="buttons" text-center>
+            <button id="signIn-button">{{'LOGIN' | translate }}</button>
+            <button type="button" style="background-color: grey;" (click)="goToPrev()">{{'BACK' | translate}}</button>
+        </div>
+        <div class="buttons" text-center>
+            <button ion-button type="button" class="facebook-button" (click)="loginFb()">{{'LOGIN-FACEBOOK-BUTTON' | translate}}</button>
+        </div>
+        <a (click)="goToRecoverPage()">{{'RECOVER' | translate}}</a>
+      </form>
+    </div>
+  </div>
+</ion-content>

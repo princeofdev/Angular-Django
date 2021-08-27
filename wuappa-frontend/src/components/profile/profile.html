@@ -1,0 +1,13 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-3>
+    <ion-thumbnail item-left>
+      <img [src]="getPicture()" alt="{{user.first_name}} {{user.last_name}}">
+    </ion-thumbnail>
+    </ion-col>
+    <ion-col col-9>
+      <div>{{user.first_name}} {{user.last_name}}</div>
+      <punctuation-stars value="3" read="true"></punctuation-stars>
+    </ion-col>
+  </ion-row>
+</ion-grid>

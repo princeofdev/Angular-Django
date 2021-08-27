@@ -1,0 +1,50 @@
+static-maps {
+  background: #f4f3ef;
+    min-height: 100%;
+    .map {
+      ion-spinner {
+        position: absolute;
+        top:  calc(50% - 14px);
+        left: calc(50% - 14px);
+        z-index: 1;
+      }
+      min-height: 100% !important;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      &.placeholder {
+        z-index: 1;
+        background-image: url('../assets/imgs/default_map.png');
+        background-color: white;
+      }
+      &.real {
+        opacity: 0;
+        transition: opacity 1s;
+        transition-delay: 0.5s;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+    map-searchbar{
+      z-index: 10;
+      position: absolute;
+      top: 50px;
+      width: 100%;
+    }
+    button {
+      position: absolute !important;
+      bottom: 20px;
+      width: 95%;
+      background-color: #E46D7A  !important;
+      text-align: center  !important;
+      font-family: "Open Sans"  !important;
+      font-size: 14px  !important;
+      border-radius: 25px  !important;
+      left: 2%;
+      z-index: 10 !important;
+    }
+}

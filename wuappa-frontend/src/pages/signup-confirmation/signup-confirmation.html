@@ -1,0 +1,23 @@
+<ion-header>
+<navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row *ngIf="isUIIdeal()">
+    <i class="fa fa-smile-o"></i>
+    <h6>
+      {{'Account created successfully' | translate}}! <br>
+      {{'CONFIRMATION-EMAIL-SENT' | translate}}
+    </h6>
+    <button id="login-btn" ion-button (click)="goToLoginPage()">{{'LOGIN' | translate}}</button>
+  </ion-row>
+  <ion-row *ngIf="isUIError()">
+    <i class="fa fa-frown-o"></i>
+    <h6>
+      {{'ERROR' | translate}} <br>
+      {{'CHECK-DETAILS' | translate}}! <br>
+    </h6>
+    <button id="details-btn" ion-button (click)="backToDetails()">{{'Go back' | translate}}</button>
+  </ion-row>
+</ion-content>

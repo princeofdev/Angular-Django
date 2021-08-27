@@ -1,0 +1,48 @@
+page-signup-add-picture {
+
+    .add-picture-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+       h6{
+           margin-bottom: 22px;
+           font-size: 16px;
+           color: #484B4B;
+           font-weight: 300;
+           font-family: "Open Sans";
+
+       }
+    }
+
+
+
+    .add-picture-button{
+        width: 200px;
+        height: 200px;
+        background-color: #ECEDED;
+        ion-icon{
+            color: #484B4B;
+            font-size: 40px;
+        }
+    }
+
+    .profile-picture-bg{
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;  
+    }
+
+    .next-button{
+        margin-top: 40px;
+        width: 100%;
+        height: 52px;
+        background-color: #89898A;
+        text-align: center;
+        font-family: "Open Sans";
+        font-size: 16px;
+        border-radius: 8px;
+    }
+}

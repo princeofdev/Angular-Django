@@ -1,0 +1,162 @@
+page-payment-method{
+
+    ion-navbar {
+      .fa {
+        font-size:1.5em;
+        color: black;
+      }
+      height: 50px;
+      button {
+        background: transparent !important;
+        color: black !important;
+      }
+    }
+
+    [menuToggle] {
+        margin-top: 10px;
+    }
+
+    .list-ios .item-block .item-inner,
+    .list-md .item-block .item-inner{
+        border: 0 !important;
+    }
+    .list-ios > .item-block:first-child{
+        border-top: 0;
+    }
+    .title{
+        color: #484B4B;
+        font-size: 16px !important;
+        font-family: "Lucida Grande";
+    }
+    .add-icon{
+        font-weight: bold;
+        font-size: 30px;
+        // position: absolute;
+        // right: 10px;
+        // top: 5px;
+    }
+    ion-list{
+        width: 100% !important;
+        border: 0!important;
+    }
+    ion-item{
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0!important;
+        border-bottom: 1px solid #DBDBDC !important;
+        .input-wrapper{
+            margin-left: 0 !important;
+        }
+    }
+    .option{
+        width: 20px !important;
+        height: 20px !important;
+        margin-right: .7em;
+
+    }
+    .card-img{
+       width:  46,15px !important;
+       height: 40px !important;
+    }
+    payment-button{
+        width: 100%;
+        padding-left: 0!important;
+    }
+    .input-wrapper{
+        display: block;
+        text-align: left;
+        margin-left: 5%;
+        font-family: "Lucida Grande";
+        font-weight: lighter;
+    }
+    .input-wrapper h2{
+        padding-top: 4%;
+        margin-bottom: 5%;
+        font-size: .8em;
+        font-family: "Lucida Grande";
+
+    }
+     .input-wrapper p{
+        font-size: .7em;
+        font-family: "Lucida Grande";
+
+    }
+    .input-wrapper h2, .input-wrapper p{
+        margin-bottom: 5%;
+    }
+    ion-label{
+        font-family: "Lucida Grande";
+        text-align: center !important;
+        color: #484B4B;
+        font-size: 16px ;
+        display: inline-block;
+    }
+    ion-input{
+        width: 100%;
+        border: 1px solid #DBDBDC !important;
+        border-radius: 10px;
+
+    }
+    ion-item.coupon{
+        margin-top: 25px;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+
+        ion-label{
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    .coupon-valid{
+        border: 1px solid green !important;
+    }
+
+    .coupon-invalid{
+        border: 1px solid red !important;
+    }
+
+
+    .apply-btn{
+        width: 50%;
+        height: 45px;
+        background-color: #D8D8D8;
+        text-align: center;
+        margin-top: 5%;
+        color: white;
+        font-family: "Lucida Grande";
+        font-size: 16px;
+        border-radius: 30px;
+        text-transform: capitalize;
+
+    }
+    .continue-button{
+        width: 100%;
+        height: 44px;
+        text-align: center;
+        font-family: 'Lucida Grande';
+        font-size: 17px;
+        background-color: #E46D7A;
+        color: white;
+        margin-top: 5%;
+        text-transform: capitalize;
+        border-radius: 24.5px;
+    }
+    .arrow{
+        width:50%;
+        float:right;
+        margin-right: 3%;
+    }
+    .arrow-container{
+        display: inline-table;
+        text-align: center;
+    }
+
+    ion-title{
+      font-size: 21px  !important;
+      font-family: "Playfair Display" !important;
+      font-weight: 500  !important;
+      color: #363939  !important;
+  }
+
+}

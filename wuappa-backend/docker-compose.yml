@@ -1,0 +1,30 @@
+version: '2'
+services:
+    postgres:
+        image: postgres
+        container_name: wuappa_postgres
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - 5435:5432
+    django:
+        image: python:3.5
+        container_name: wuappa_django
+        env_file:
+            - .env
+        environment:
+            - DJANGO_SETTINGS_MODULE=wuappa.settings_staging
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_HOST=postgres
+        working_dir: /code
+        volumes:
+            - .:/code
+        command: bash -c "pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput && python manage.py loaddata geo_staging users_staging && gunicorn -w 4 -t 180 -b 0.0.0.0:8000 wuappa.wsgi"
+        ports:
+            - 6200:8000
+        depends_on:
+            - postgres

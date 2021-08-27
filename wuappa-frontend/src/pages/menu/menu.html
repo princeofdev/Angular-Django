@@ -1,0 +1,51 @@
+<ion-menu [content]="content">
+  <ion-content class="custom">
+    <ion-list>
+      <button menuClose ion-item (click)="openPage('Home')" *ngIf="isFinalUser()">
+        {{'Home' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Settings')" *ngIf="isFinalUser()">
+        {{'Settings' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('My appointments')">
+        {{'My appointments' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Settings')" *ngIf="isProfessionalUser()">
+        {{'Settings' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Payment methods')" *ngIf="isFinalUser()">
+        {{'Payment methods' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Bank account')" *ngIf="isProfessionalUser()">
+        {{'Bank account' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Workdays')" *ngIf="isProfessionalUser()">
+        {{'Workdays' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Holidays')" *ngIf="isProfessionalUser()">
+        {{'Holidays' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('WORKZONE')" *ngIf="isProfessionalUser()">
+        {{'WORKZONE' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Services')" *ngIf="isProfessionalUser()">
+        {{'Services' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('TERMS-CONDITIONS')">
+        {{'TERMS-CONDITIONS' | translate}}
+      </button>
+      <button menuClose ion-item (click)="openPage('Help & Support')">
+        {{'Help & Support' | translate}}
+      </button>
+      <button menuClose ion-item (click)="shareApp()">
+        {{ 'Share the app on social networks' | translate}}
+      </button>
+      <button menuClose ion-item (click)="logout()">
+        {{'Sign out' | translate}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" id="menuRoot" #content swipeBackEnabled="false"></ion-nav>

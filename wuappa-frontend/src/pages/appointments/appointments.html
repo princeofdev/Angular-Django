@@ -1,0 +1,51 @@
+
+<ion-header>
+    <navbar [title]="title"></navbar>
+</ion-header>
+    <ion-content padding>
+        <ion-row text-center *ngIf="isUILoading()">
+            <ion-col col-12>
+                <ion-spinner></ion-spinner>
+            </ion-col>
+        </ion-row>
+        <ion-row class="full-width">
+            <ion-col col-md-4 class="tab"  [ngClass]="{'col-active completed': activeItem == 'completed'}" (click)="changeTab('completed')">
+              <div>
+                {{'COMPLETED' | translate}} <span class="text-tab"  [hidden]="activeItem == 'completed'">{{completedList.length}}</span>
+              </div>
+            </ion-col>
+            <ion-col col-md-4 class="tab" [ngClass]="{'col-active confirmed': activeItem == 'confirmed'}" (click)="changeTab('confirmed')">
+              <div >
+                {{'CONFIRMED' | translate}} <span class="text-tab"  [hidden]="activeItem == 'confirmed'">{{confirmedList.length}}</span>
+              </div>
+            </ion-col>
+            <ion-col col-md-4 class="tab" [ngClass]="{'col-active pending': activeItem == 'pending'}" (click)="changeTab('pending')">
+              <div>
+                    {{'PENDING' | translate}}  <span class="text-tab"  [hidden]="activeItem == 'pending'">{{pendingList.length}}</span>
+              </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="full-width">
+                <ion-col col-md-12  *ngIf="activeItem == 'completed' && isUIIdeal()">
+                    <appointment-item *ngFor="let item of completedList" [appointment]="item" (goDetail)="goToDetail($event)"></appointment-item>
+                </ion-col>
+                <ion-col col-md-12 *ngIf="activeItem == 'confirmed' && isUIIdeal()">
+                    <appointment-item *ngFor="let item of confirmedList" [appointment]="item" (goDetail)="goToDetail($event)"></appointment-item>
+                </ion-col>
+                <ion-col col-md-12 *ngIf="activeItem == 'pending' && isUIIdeal()">
+                    <appointment-item *ngFor="let item of pendingList" [appointment]="item" (goDetail)="goToDetail($event)"></appointment-item>
+                </ion-col>
+                <ion-col col-md-12 *ngIf="isUIBlank()" text-center>
+                    <h6 class="no-appointments">{{'There are no appointments' | translate}}</h6>
+                    <h6 *ngIf="user.type === 'FIN'">{{'Ready to book?' | translate}}</h6>
+                    <button ion-button *ngIf="user.type === 'FIN'" class="hire-button" (click)="goToHome()">{{'New appointment' | translate}}</button>
+                </ion-col>
+            </ion-row>
+        <ion-row class="full-width" *ngIf="isUIError()">
+            <ion-col col-md-12 >
+                <div class="text-error">
+                    {{'UPSERROR' | translate}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-content>

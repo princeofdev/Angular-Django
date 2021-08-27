@@ -1,0 +1,17 @@
+<ion-header>
+  <navbar [title]="title" [registerMode]="registerMode"></navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row class="add-picture-box">
+    <h6 *ngIf="userType === 'FIN'">{{'ADD-PROFILE-PICTURE' | translate}}:</h6>
+    <h6 *ngIf="userType === 'PRO'">{{'ADD-PROFILE-PICTURE-MANDATORY' | translate}}:</h6>
+      <image-uploader (onUploadFinished)="imageUploaded($event)">
+        <button [hidden]="image" class="add-picture-button" ion-button block>
+          <ion-icon name="md-camera"></ion-icon>
+        </button>
+        <button [hidden]="!image" [ngStyle]="{'background-image': 'url(' + image + ')'}"  class="profile-picture-bg" ion-button block></button>
+      </image-uploader>
+      <button [disabled]="mandatoryPicture()" ion-button class="next-button" (click)="goToTermsConditionsPage()">{{'NEXT' | translate}}</button>
+  </ion-row>
+</ion-content>

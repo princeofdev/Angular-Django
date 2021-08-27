@@ -1,0 +1,35 @@
+.name-price {
+    // display: flex !important;
+    margin: 5px 0 0 0;
+}
+.service-name {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #606262;
+    max-width: 65%;
+    white-space: normal;
+    display: inline-block;
+}
+.price-name {
+    display: inline-block;
+    margin: 2px 0 0 17px;
+    position: relative;
+    color: #626060;
+    font-size: 14px;
+    vertical-align: top;
+}
+.desc-time {
+    color: #626060;
+    font-size: 13px;
+    white-space: normal!important;
+}
+.arrow {
+    position: absolute;
+    right: 19px;
+    top: calc(50% - 10px);
+    background: white;
+    padding: 3px;
+}
+.item-service {
+    margin-bottom: 7px;
+}

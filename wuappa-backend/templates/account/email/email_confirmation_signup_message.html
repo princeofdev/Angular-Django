@@ -1,0 +1,26 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account %}
+{% load static %}
+
+{% block head_title %}
+    WUAPPA - {% trans "Verify your account" %}
+{% endblock %}
+
+{% block content %}
+
+    <p>{% trans "Welcome to WUAPPA" %}</p>
+
+    <p>{% trans "Your account is almost ready." %}<br>
+        {% trans "We just need to verify your email address in order to complete your signup." %}</p>
+
+    <p><a href="{{ activate_url }}" class="btn">{% blocktrans %}Verify your e-mail address{% endblocktrans %}</a></p>
+    <p>or open this url in your browser {{ activate_url }}</p>
+    <p>{% blocktrans %}If you have not created an account with WUAPPA, please ignore this email.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Thanks!{% endblocktrans %}</p>
+
+    <p><strong>{% blocktrans %}The WUAPPA team.{% endblocktrans %}</strong></p>
+
+{% endblock %}

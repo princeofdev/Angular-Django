@@ -1,0 +1,36 @@
+<ion-navbar>
+  <ion-grid>
+    <ion-row class="navbar-row">
+      <ion-col col-2>
+        <ion-buttons [hidden]="registerMode">
+          <button id="burger-button" ion-button icon-only (click)="toogleMenu()">
+            <i class="fa fa-bars"></i>
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col col-8 text-center>
+        <ion-title *ngIf="!title" text-center>
+          <img src="assets/imgs/wuapa-logo-navbar.png" alt="Wuappa logo">
+        </ion-title>
+        <ion-title *ngIf="title" text-center class="title">
+          <h5>{{title}}</h5>
+        </ion-title>
+      </ion-col>
+      <ion-col col-8 text-center *ngIf="burger_hidden">
+        <ion-title *ngIf="!title" text-center>
+          <img src="assets/imgs/wuapa-logo-navbar.png" alt="Wuappa logo">
+        </ion-title>
+        <ion-title *ngIf="title" text-center class="title">
+          <h5>{{title}}</h5>
+        </ion-title>
+      </ion-col>
+      <ion-col col-2 text-right>
+        <ion-buttons [hidden]="registerMode" end>
+          <button ion-button icon-only (click)="goToAppointments()">
+            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-navbar>

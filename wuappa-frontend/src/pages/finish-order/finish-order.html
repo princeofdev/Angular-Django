@@ -1,0 +1,15 @@
+<ion-content padding>
+    <ion-row *ngIf="isUIIdeal()">
+        <h6>
+           {{'Order succesfull!' | translate}}
+        </h6>
+        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+        <p>
+            {{'Thanks for trusting us' | translate}}
+        </p>
+        <p>
+            {{'Your order has been sent to our professionals, we will notify you as soon as it is accepted' | translate}}
+        </p>
+        <button class="finish-button" (click)="goToAppointments()">{{'FINISH' | translate}}</button>
+    </ion-row>
+</ion-content>

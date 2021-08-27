@@ -1,0 +1,99 @@
+[{
+    "model": "geo.country",
+    "pk": 3,
+    "fields": {
+        "name_ascii": "Switzerland",
+        "slug": "switzerland",
+        "geoname_id": 2658434,
+        "alternate_names": "Schweizerische Eidgenossenschaft,Su\u00ed\u00e7a,Szwajcaria",
+        "name": "Switzerland",
+        "code2": "CH",
+        "code3": "CHE",
+        "continent": "EU",
+        "tld": "ch",
+        "phone": "41",
+        "status": "ACTIVE"
+    }
+}, {
+    "model": "geo.country",
+    "pk": 4,
+    "fields": {
+        "name_ascii": "Spain",
+        "slug": "spain",
+        "geoname_id": 2510769,
+        "alternate_names": "Espanha,Estado Espa\u00f1ol,Hiszpania,Kingdom of Spain,Reino de Espa\u00f1a,Spanien,Spanish State",
+        "name": "Spain",
+        "code2": "ES",
+        "code3": "ESP",
+        "continent": "EU",
+        "tld": "es",
+        "phone": "34",
+        "status": "ACTIVE"
+    }
+}, {
+    "model": "geo.region",
+    "pk": 71,
+    "fields": {
+        "name_ascii": "Geneva",
+        "slug": "geneva",
+        "geoname_id": 2660645,
+        "alternate_names": "Canton of Geneva,Cant\u00f3n de Ginebra,Genebra,Genewa,Kanton Genf,Republic and Canton of Geneva,Republik und Kanton Genf",
+        "name": "Geneva",
+        "display_name": "Geneva, Switzerland",
+        "geoname_code": "GE",
+        "country": 3,
+        "status": "ACTIVE"
+    }
+}, {
+    "model": "geo.region",
+    "pk": 89,
+    "fields": {
+        "name_ascii": "Madrid",
+        "slug": "madrid",
+        "geoname_id": 3117732,
+        "alternate_names": "Autonome Gemeinschaft Madrid,Autonome Region Madrid,Autonomous Region of Madrid,Community of Madrid,Comunidad Aut\u00f3noma de Madrid,Comunidad de Madrid,Regi\u00f3n de Madrid",
+        "name": "Madrid",
+        "display_name": "Madrid, Spain",
+        "geoname_code": "29",
+        "country": 4,
+        "status": "ACTIVE"
+    }
+}, {
+    "model": "geo.city",
+    "pk": 164,
+    "fields": {
+        "name_ascii": "Geneve",
+        "slug": "geneve",
+        "geoname_id": 2660646,
+        "alternate_names": "Genebra,Geneva,Genewa,Genf,Ginebra",
+        "name": "Gen\u00e8ve",
+        "display_name": "Gen\u00e8ve, Geneva, Switzerland",
+        "search_names": "genebracantondeginebraschweizerischeeidgenossenschaft genebracantondeginebrasuica genebracantondeginebraswitzerland genebracantondeginebraszwajcaria genebracantonofgenevaschweizerischeeidgenossenschaft genebracantonofgenevasuica genebracantonofgenevaswitzerland genebracantonofgenevaszwajcaria genebragenebraschweizerischeeidgenossenschaft genebragenebrasuica genebragenebraswitzerland genebragenebraszwajcaria genebragenevaschweizerischeeidgenossenschaft genebragenevasuica genebragenevaswitzerland genebragenevaszwajcaria genebragenewaschweizerischeeidgenossenschaft genebragenewasuica genebragenewaswitzerland genebragenewaszwajcaria genebrakantongenfschweizerischeeidgenossenschaft genebrakantongenfsuica genebrakantongenfswitzerland genebrakantongenfszwajcaria genebrarepublicandcantonofgenevaschweizerischeeidgenossenschaft genebrarepublicandcantonofgenevasuica genebrarepublicandcantonofgenevaswitzerland genebrarepublicandcantonofgenevaszwajcaria genebrarepublikundkantongenfschweizerischeeidgenossenschaft genebrarepublikundkantongenfsuica genebrarepublikundkantongenfswitzerland genebrarepublikundkantongenfszwajcaria genebraschweizerischeeidgenossenschaft genebrasuica genebraswitzerland genebraszwajcaria genevacantondeginebraschweizerischeeidgenossenschaft genevacantondeginebrasuica genevacantondeginebraswitzerland genevacantondeginebraszwajcaria genevacantonofgenevaschweizerischeeidgenossenschaft genevacantonofgenevasuica genevacantonofgenevaswitzerland genevacantonofgenevaszwajcaria genevagenebraschweizerischeeidgenossenschaft genevagenebrasuica genevagenebraswitzerland genevagenebraszwajcaria genevagenevaschweizerischeeidgenossenschaft genevagenevasuica genevagenevaswitzerland genevagenevaszwajcaria genevagenewaschweizerischeeidgenossenschaft genevagenewasuica genevagenewaswitzerland genevagenewaszwajcaria genevakantongenfschweizerischeeidgenossenschaft genevakantongenfsuica genevakantongenfswitzerland genevakantongenfszwajcaria genevarepublicandcantonofgenevaschweizerischeeidgenossenschaft genevarepublicandcantonofgenevasuica genevarepublicandcantonofgenevaswitzerland genevarepublicandcantonofgenevaszwajcaria genevarepublikundkantongenfschweizerischeeidgenossenschaft genevarepublikundkantongenfsuica genevarepublikundkantongenfswitzerland genevarepublikundkantongenfszwajcaria genevaschweizerischeeidgenossenschaft genevasuica genevaswitzerland genevaszwajcaria genevecantondeginebraschweizerischeeidgenossenschaft genevecantondeginebrasuica genevecantondeginebraswitzerland genevecantondeginebraszwajcaria genevecantonofgenevaschweizerischeeidgenossenschaft genevecantonofgenevasuica genevecantonofgenevaswitzerland genevecantonofgenevaszwajcaria genevegenebraschweizerischeeidgenossenschaft genevegenebrasuica genevegenebraswitzerland genevegenebraszwajcaria genevegenevaschweizerischeeidgenossenschaft genevegenevasuica genevegenevaswitzerland genevegenevaszwajcaria genevegenewaschweizerischeeidgenossenschaft genevegenewasuica genevegenewaswitzerland genevegenewaszwajcaria genevekantongenfschweizerischeeidgenossenschaft genevekantongenfsuica genevekantongenfswitzerland genevekantongenfszwajcaria geneverepublicandcantonofgenevaschweizerischeeidgenossenschaft geneverepublicandcantonofgenevasuica geneverepublicandcantonofgenevaswitzerland geneverepublicandcantonofgenevaszwajcaria geneverepublikundkantongenfschweizerischeeidgenossenschaft geneverepublikundkantongenfsuica geneverepublikundkantongenfswitzerland geneverepublikundkantongenfszwajcaria geneveschweizerischeeidgenossenschaft genevesuica geneveswitzerland geneveszwajcaria genewacantondeginebraschweizerischeeidgenossenschaft genewacantondeginebrasuica genewacantondeginebraswitzerland genewacantondeginebraszwajcaria genewacantonofgenevaschweizerischeeidgenossenschaft genewacantonofgenevasuica genewacantonofgenevaswitzerland genewacantonofgenevaszwajcaria genewagenebraschweizerischeeidgenossenschaft genewagenebrasuica genewagenebraswitzerland genewagenebraszwajcaria genewagenevaschweizerischeeidgenossenschaft genewagenevasuica genewagenevaswitzerland genewagenevaszwajcaria genewagenewaschweizerischeeidgenossenschaft genewagenewasuica genewagenewaswitzerland genewagenewaszwajcaria genewakantongenfschweizerischeeidgenossenschaft genewakantongenfsuica genewakantongenfswitzerland genewakantongenfszwajcaria genewarepublicandcantonofgenevaschweizerischeeidgenossenschaft genewarepublicandcantonofgenevasuica genewarepublicandcantonofgenevaswitzerland genewarepublicandcantonofgenevaszwajcaria genewarepublikundkantongenfschweizerischeeidgenossenschaft genewarepublikundkantongenfsuica genewarepublikundkantongenfswitzerland genewarepublikundkantongenfszwajcaria genewaschweizerischeeidgenossenschaft genewasuica genewaswitzerland genewaszwajcaria genfcantondeginebraschweizerischeeidgenossenschaft genfcantondeginebrasuica genfcantondeginebraswitzerland genfcantondeginebraszwajcaria genfcantonofgenevaschweizerischeeidgenossenschaft genfcantonofgenevasuica genfcantonofgenevaswitzerland genfcantonofgenevaszwajcaria genfgenebraschweizerischeeidgenossenschaft genfgenebrasuica genfgenebraswitzerland genfgenebraszwajcaria genfgenevaschweizerischeeidgenossenschaft genfgenevasuica genfgenevaswitzerland genfgenevaszwajcaria genfgenewaschweizerischeeidgenossenschaft genfgenewasuica genfgenewaswitzerland genfgenewaszwajcaria genfkantongenfschweizerischeeidgenossenschaft genfkantongenfsuica genfkantongenfswitzerland genfkantongenfszwajcaria genfrepublicandcantonofgenevaschweizerischeeidgenossenschaft genfrepublicandcantonofgenevasuica genfrepublicandcantonofgenevaswitzerland genfrepublicandcantonofgenevaszwajcaria genfrepublikundkantongenfschweizerischeeidgenossenschaft genfrepublikundkantongenfsuica genfrepublikundkantongenfswitzerland genfrepublikundkantongenfszwajcaria genfschweizerischeeidgenossenschaft genfsuica genfswitzerland genfszwajcaria ginebracantondeginebraschweizerischeeidgenossenschaft ginebracantondeginebrasuica ginebracantondeginebraswitzerland ginebracantondeginebraszwajcaria ginebracantonofgenevaschweizerischeeidgenossenschaft ginebracantonofgenevasuica ginebracantonofgenevaswitzerland ginebracantonofgenevaszwajcaria ginebragenebraschweizerischeeidgenossenschaft ginebragenebrasuica ginebragenebraswitzerland ginebragenebraszwajcaria ginebragenevaschweizerischeeidgenossenschaft ginebragenevasuica ginebragenevaswitzerland ginebragenevaszwajcaria ginebragenewaschweizerischeeidgenossenschaft ginebragenewasuica ginebragenewaswitzerland ginebragenewaszwajcaria ginebrakantongenfschweizerischeeidgenossenschaft ginebrakantongenfsuica ginebrakantongenfswitzerland ginebrakantongenfszwajcaria ginebrarepublicandcantonofgenevaschweizerischeeidgenossenschaft ginebrarepublicandcantonofgenevasuica ginebrarepublicandcantonofgenevaswitzerland ginebrarepublicandcantonofgenevaszwajcaria ginebrarepublikundkantongenfschweizerischeeidgenossenschaft ginebrarepublikundkantongenfsuica ginebrarepublikundkantongenfswitzerland ginebrarepublikundkantongenfszwajcaria ginebraschweizerischeeidgenossenschaft ginebrasuica ginebraswitzerland ginebraszwajcaria",
+        "latitude": "46.20222",
+        "longitude": "6.14569",
+        "region": 71,
+        "country": 3,
+        "population": 183981,
+        "feature_code": "PPLA",
+        "status": "ACTIVE"
+    }
+}, {
+    "model": "geo.city",
+    "pk": 598,
+    "fields": {
+        "name_ascii": "Madrid",
+        "slug": "madrid",
+        "geoname_id": 3117735,
+        "alternate_names": "Madryt,Sanchinarro",
+        "name": "Madrid",
+        "display_name": "Madrid, Madrid, Spain",
+        "search_names": "madridautonomegemeinschaftmadridespanha madridautonomegemeinschaftmadridestadoespanol madridautonomegemeinschaftmadridhiszpania madridautonomegemeinschaftmadridkingdomofspain madridautonomegemeinschaftmadridreinodeespana madridautonomegemeinschaftmadridspain madridautonomegemeinschaftmadridspanien madridautonomegemeinschaftmadridspanishstate madridautonomeregionmadridespanha madridautonomeregionmadridestadoespanol madridautonomeregionmadridhiszpania madridautonomeregionmadridkingdomofspain madridautonomeregionmadridreinodeespana madridautonomeregionmadridspain madridautonomeregionmadridspanien madridautonomeregionmadridspanishstate madridautonomousregionofmadridespanha madridautonomousregionofmadridestadoespanol madridautonomousregionofmadridhiszpania madridautonomousregionofmadridkingdomofspain madridautonomousregionofmadridreinodeespana madridautonomousregionofmadridspain madridautonomousregionofmadridspanien madridautonomousregionofmadridspanishstate madridcommunityofmadridespanha madridcommunityofmadridestadoespanol madridcommunityofmadridhiszpania madridcommunityofmadridkingdomofspain madridcommunityofmadridreinodeespana madridcommunityofmadridspain madridcommunityofmadridspanien madridcommunityofmadridspanishstate madridcomunidadautonomademadridespanha madridcomunidadautonomademadridestadoespanol madridcomunidadautonomademadridhiszpania madridcomunidadautonomademadridkingdomofspain madridcomunidadautonomademadridreinodeespana madridcomunidadautonomademadridspain madridcomunidadautonomademadridspanien madridcomunidadautonomademadridspanishstate madridcomunidaddemadridespanha madridcomunidaddemadridestadoespanol madridcomunidaddemadridhiszpania madridcomunidaddemadridkingdomofspain madridcomunidaddemadridreinodeespana madridcomunidaddemadridspain madridcomunidaddemadridspanien madridcomunidaddemadridspanishstate madridespanha madridestadoespanol madridhiszpania madridkingdomofspain madridmadridespanha madridmadridestadoespanol madridmadridhiszpania madridmadridkingdomofspain madridmadridreinodeespana madridmadridspain madridmadridspanien madridmadridspanishstate madridregiondemadridespanha madridregiondemadridestadoespanol madridregiondemadridhiszpania madridregiondemadridkingdomofspain madridregiondemadridreinodeespana madridregiondemadridspain madridregiondemadridspanien madridregiondemadridspanishstate madridreinodeespana madridspain madridspanien madridspanishstate madrytautonomegemeinschaftmadridespanha madrytautonomegemeinschaftmadridestadoespanol madrytautonomegemeinschaftmadridhiszpania madrytautonomegemeinschaftmadridkingdomofspain madrytautonomegemeinschaftmadridreinodeespana madrytautonomegemeinschaftmadridspain madrytautonomegemeinschaftmadridspanien madrytautonomegemeinschaftmadridspanishstate madrytautonomeregionmadridespanha madrytautonomeregionmadridestadoespanol madrytautonomeregionmadridhiszpania madrytautonomeregionmadridkingdomofspain madrytautonomeregionmadridreinodeespana madrytautonomeregionmadridspain madrytautonomeregionmadridspanien madrytautonomeregionmadridspanishstate madrytautonomousregionofmadridespanha madrytautonomousregionofmadridestadoespanol madrytautonomousregionofmadridhiszpania madrytautonomousregionofmadridkingdomofspain madrytautonomousregionofmadridreinodeespana madrytautonomousregionofmadridspain madrytautonomousregionofmadridspanien madrytautonomousregionofmadridspanishstate madrytcommunityofmadridespanha madrytcommunityofmadridestadoespanol madrytcommunityofmadridhiszpania madrytcommunityofmadridkingdomofspain madrytcommunityofmadridreinodeespana madrytcommunityofmadridspain madrytcommunityofmadridspanien madrytcommunityofmadridspanishstate madrytcomunidadautonomademadridespanha madrytcomunidadautonomademadridestadoespanol madrytcomunidadautonomademadridhiszpania madrytcomunidadautonomademadridkingdomofspain madrytcomunidadautonomademadridreinodeespana madrytcomunidadautonomademadridspain madrytcomunidadautonomademadridspanien madrytcomunidadautonomademadridspanishstate madrytcomunidaddemadridespanha madrytcomunidaddemadridestadoespanol madrytcomunidaddemadridhiszpania madrytcomunidaddemadridkingdomofspain madrytcomunidaddemadridreinodeespana madrytcomunidaddemadridspain madrytcomunidaddemadridspanien madrytcomunidaddemadridspanishstate madrytespanha madrytestadoespanol madrythiszpania madrytkingdomofspain madrytmadridespanha madrytmadridestadoespanol madrytmadridhiszpania madrytmadridkingdomofspain madrytmadridreinodeespana madrytmadridspain madrytmadridspanien madrytmadridspanishstate madrytregiondemadridespanha madrytregiondemadridestadoespanol madrytregiondemadridhiszpania madrytregiondemadridkingdomofspain madrytregiondemadridreinodeespana madrytregiondemadridspain madrytregiondemadridspanien madrytregiondemadridspanishstate madrytreinodeespana madrytspain madrytspanien madrytspanishstate sanchinarroautonomegemeinschaftmadridespanha sanchinarroautonomegemeinschaftmadridestadoespanol sanchinarroautonomegemeinschaftmadridhiszpania sanchinarroautonomegemeinschaftmadridkingdomofspain sanchinarroautonomegemeinschaftmadridreinodeespana sanchinarroautonomegemeinschaftmadridspain sanchinarroautonomegemeinschaftmadridspanien sanchinarroautonomegemeinschaftmadridspanishstate sanchinarroautonomeregionmadridespanha sanchinarroautonomeregionmadridestadoespanol sanchinarroautonomeregionmadridhiszpania sanchinarroautonomeregionmadridkingdomofspain sanchinarroautonomeregionmadridreinodeespana sanchinarroautonomeregionmadridspain sanchinarroautonomeregionmadridspanien sanchinarroautonomeregionmadridspanishstate sanchinarroautonomousregionofmadridespanha sanchinarroautonomousregionofmadridestadoespanol sanchinarroautonomousregionofmadridhiszpania sanchinarroautonomousregionofmadridkingdomofspain sanchinarroautonomousregionofmadridreinodeespana sanchinarroautonomousregionofmadridspain sanchinarroautonomousregionofmadridspanien sanchinarroautonomousregionofmadridspanishstate sanchinarrocommunityofmadridespanha sanchinarrocommunityofmadridestadoespanol sanchinarrocommunityofmadridhiszpania sanchinarrocommunityofmadridkingdomofspain sanchinarrocommunityofmadridreinodeespana sanchinarrocommunityofmadridspain sanchinarrocommunityofmadridspanien sanchinarrocommunityofmadridspanishstate sanchinarrocomunidadautonomademadridespanha sanchinarrocomunidadautonomademadridestadoespanol sanchinarrocomunidadautonomademadridhiszpania sanchinarrocomunidadautonomademadridkingdomofspain sanchinarrocomunidadautonomademadridreinodeespana sanchinarrocomunidadautonomademadridspain sanchinarrocomunidadautonomademadridspanien sanchinarrocomunidadautonomademadridspanishstate sanchinarrocomunidaddemadridespanha sanchinarrocomunidaddemadridestadoespanol sanchinarrocomunidaddemadridhiszpania sanchinarrocomunidaddemadridkingdomofspain sanchinarrocomunidaddemadridreinodeespana sanchinarrocomunidaddemadridspain sanchinarrocomunidaddemadridspanien sanchinarrocomunidaddemadridspanishstate sanchinarroespanha sanchinarroestadoespanol sanchinarrohiszpania sanchinarrokingdomofspain sanchinarromadridespanha sanchinarromadridestadoespanol sanchinarromadridhiszpania sanchinarromadridkingdomofspain sanchinarromadridreinodeespana sanchinarromadridspain sanchinarromadridspanien sanchinarromadridspanishstate sanchinarroregiondemadridespanha sanchinarroregiondemadridestadoespanol sanchinarroregiondemadridhiszpania sanchinarroregiondemadridkingdomofspain sanchinarroregiondemadridreinodeespana sanchinarroregiondemadridspain sanchinarroregiondemadridspanien sanchinarroregiondemadridspanishstate sanchinarroreinodeespana sanchinarrospain sanchinarrospanien sanchinarrospanishstate",
+        "latitude": "40.41650",
+        "longitude": "-3.70256",
+        "region": 89,
+        "country": 4,
+        "population": 3255944,
+        "feature_code": "PPLC",
+        "status": "ACTIVE"
+    }
+}]
